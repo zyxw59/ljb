@@ -1,0 +1,32 @@
+Western:
+Vowel mergers!
+- e o a → eː e ɛ / _{-labial,+velar}
+        → o oː ɔ / _{+labial}
+- {+syllabic, +labial} → u{-syllabic}
+- {+syllabic, -labial} → ə{-syllabic}
+Epenthetic /ə/
+Delabialization of labiovelars
+- 0 → w / {+vowel,-rounded}_{+labial,+velar}
+        / {+labial,+velar}_{+vowel,-rounded}
+- {+labial,+velar} → {-labial}
+{+implosive} → {-implosive, +voiced, +plosive} → {-plosive, +fricative}
+Loss of contrastive accent
+- Stress falls on third-to-last mora
+
+Seóru:
+Loss of glottals
+Palatalization of alveolars
+Loss of phonemic velar nasal
+- ŋ → ŋɡ / {V}_{+approximant}?{V}
+    → ɡ  / #_
+- ɡ → ŋ / _#
+        / _{+velar}
+Reduction of post-stress vowels:
+- {+front} → j / {+stress}_
+- {+back} → w / {+stress}_
+- {+central} → 0 / {+stress}_
+
+Orthography:
+/i e ɛ/ → ‹i›
+/u o ɔ/ → ‹u›
+/ə a/ → ‹a› ← ‹h›

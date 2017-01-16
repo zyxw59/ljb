@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{expex}
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{threeparttable}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
+\usepackage{fullpage}
+
+\setmainfont{CMU Serif}
+\newfontface\slfont{CMU Serif Roman Slanted}
+
+\catcode`∅=13 % <Multi_key> <slash> <0>
+\def ∅{$\varnothing$}
+
+\def\∅{$\acute\varnothing$}
+
+\def \^{\textsuperscript}
+\def \_{\textsubscript}
+
+\def \ll{\slfont}
+\def \qq #1{‘#1’}
+\def \dq #1{“#1”}
+\def \ie{i.\,e.}
+\def \eg{e.\,g.}
+\def \slashes #1{{\rm /#1/}}
+\def \Langname{Proto-{\ll ləjbɦáhè}}
+
+\lingset{everyglpreamble=\ll,everygla=\ll}
+
+\renewcommand{\TPTminimum}{\linewidth}
+
+\newenvironment{dicttable}{%
+    \begin{longtabu} to \textwidth {>{\ll}l X<{\strut}}
+        \toprule
+        \rm Word & Meaning \\ \midrule
+    \endhead}
+{\bottomrule
+\end{longtabu}}
+
+\begin{document}
+\pagenumbering{roman}
+
+\title{\Langname{} Language}
+\author{Emily Crandall Fleischman}
+\date{}
+\maketitle
+
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\input{sections/phonology}
+
+\clearpage
+\input{sections/sentence_structure}
+
+\clearpage
+\input{sections/verbs}
+
+\clearpage
+\input{sections/particles}
+
+\clearpage
+\input{sections/nouns}
+
+\clearpage
+\input{sections/example_sentences}
+
+\appendix
+\clearpage
+\section{Roots}
+\begin{dicttable}
+    \input{tables/roots}
+\end{dicttable}
+
+\clearpage
+\section{Verbal Derivational Endings}
+\begin{dicttable}
+    \input{tables/verbal_derivational_endings}
+\end{dicttable}
+
+\clearpage
+\section{Derived Verbs}
+\begin{dicttable}
+    \input{tables/derived_verbs}
+\end{dicttable}
+
+\clearpage
+\section{Nominalizers}
+\begin{dicttable}
+    \input{tables/nominalizers}
+\end{dicttable}
+
+\clearpage
+\section{Secondary Nominal Endings}
+\begin{dicttable}
+    \input{tables/secondary_nominal}
+\end{dicttable}
+
+\clearpage
+\section{Nouns}
+\begin{dicttable}
+    \input{tables/nouns}
+\end{dicttable}
+
+\clearpage
+\section{Prepositions}
+\begin{dicttable}
+    \input{tables/prepositions}
+\end{dicttable}
+
+\clearpage
+\section{Quantifiers}
+\begin{dicttable}
+    \input{tables/quantifiers}
+\end{dicttable}
+
+\clearpage
+\section{Conjunctions}
+\begin{dicttable}
+    \input{tables/conjunctions}
+\end{dicttable}
+
+\end{document}
