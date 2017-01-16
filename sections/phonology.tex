@@ -19,71 +19,66 @@
 \end{tabu}
 \end{table}
 
-\subsection{Roots}
+\subsection{Syllables}
 \paragraph{Consonants}
-Roots must follow the sonorance hierarchy, with more sonorant elements falling
-closer to the nucleus than less sonorant elements. There are three categories
-of consonants as follows, from most to least sonorant:
+Syllables must follow the sonorance hierarchy, with more sonorant elements
+falling closer to the nucleus than less sonorant elements. There are three
+categories of consonants as follows, from most to least sonorant:
 \begin{itemize}
     \item Approximants, laterals, and nasals (S)
     \item Fricatives (F)
     \item Plosives and implosives (P)
 \end{itemize}
-Roots are of the general form PFS–SFP, with an optional vowel separating the
-onset and coda. Each category is optional, although the onset cannot be null.
-If both a plosive and a fricative are present, they must agree in voice.
+Syllables are of the general form PFS--SFP, with an optional vowel separating
+the onset and coda. Each category is optional, although the onset cannot be
+null. If both a plosive and a fricative are present, they must agree in voice.
 
-\paragraph{Vowels}
-Roots do not have any inherent vowel associated with them. When a
-root appears on it's own, the position of the vowel will be marked with a dot
-(.) if the root is weak, or an acute accent (´) if it is strong. When it
-appears with an ending, the root can appear in one of four forms, or grades:
-\begin{itemize}
-    \item {\ll ə}-grade
-    \item {\ll e}-grade
-    \item {\ll o}-grade
-    \item {\ll a}-grade
-\end{itemize}
-The sonorants have syllabic allophones in the ə-grade. Syllabic \slashes{j} and
-\slashes{w} will be denoted as {\ll i} and {\ll u}, while other syllabic
-sonorants will be denoted as in the IPA.
+\subsection{Accent}
+The accent system of \Langname{} falls somewhere between a pitch accent and a
+tone system. Each syllable can carry either a high tone ({\em acute\/}), a
+falling tone ({\em grave\/}), or a neutral tone ({\em weak\/}). However, each
+acute accent must be followed by a grave accent, and each grave accent must
+follow an acute accent.
 
-\paragraph{Accent}
-Roots or words do not have an inherent accent. Instead, each root (and ending)
-is classified as {\em strong}, {\em weak}, or {\em grave}. Weak syllables
-generally have no effect on the accent, but they are made strong if followed by
-a grave syllable. The accent in a word falls on the first strong syllable. In
-this document, strong syllables will be marked with an acute accent (´), and
-grave syllables with a grave accent (\textgrave). Neutral syllables are
-unmarked.
-% TODO: add examples
+When a weak syllable follows an acute accent, it gains a grave accent.
+Likewise, when a weak syllable precedes a grave accent, it gains an acute
+accent. When an acute accent would follow another acute accent, or a grave
+accent follow another grave accent, the sequence is replaced by an acute--grave
+sequence.
 
-\subsection{Endings}
-Endings are of the same general form as roots, although they do have an
-inherent grade. The grades of the root and the ending
-are determined by \cref{tab:grades}. If there are multiple endings, only the
-one closest to the root affects the grade of the root.
+\subsection{Vowels}
+There are four phonemic vowels in \Langname{}: {\ll ə}, {\ll e}, {\ll o}, and
+{\ll a}. Roots do not have any inherent vowel associated with them. When a
+root appears on its own, the position of the vowel will be marked with a dot
+(.) if the root is weak (no inherent accent), or an acute accent (´) if it is
+strong (inherent acute accent). Endings do carry an inherent vowel. The vowel
+of the first ending is know as the {\em stem vowel\/}. If the root has an acute
+accent, it takes the stem vowel, otherwise it takes {\ll ə}.
+
+A vowel with a grave accent changes depending on the stem vowel of the word,
+according to \cref{tab:ablaut}. An unaccented vowel (neutral tone) is always
+{\ll ə}.
+
 \begin{table}[h]
 \centering
-\caption{Grade ablaut}
-\label{tab:grades}
-\begin{tabular}{>{\ll}c l *{2}{>{\ll}c}}
+\caption{Ablaut}
+\label{tab:ablaut}
+\begin{tabular}{*{3}{>{\ll}c}}
     \toprule
-    \rm Inherent grade & Position & \rm Root grade & \rm Ending grade \\
+    \rm Vowel & \rm Stem vowel & \rm Grave form \\
     \midrule
-    ə & Always      & ə & ə \\ \midrule
-    e & Accented    & e & e \\
-      & Post-accent & — & e \\
-      & Pre-accent  & e & ə \\
-      & Else        & ə & ə \\ \midrule
-    o & Accented    & o & o \\
-      & Post-accent & — & o \\
-      & Pre-accent  & o & ə \\
-      & Else        & ə & ə \\ \midrule
-    a & Accented    & a & a \\
-      & Post-accent & — & о \\
-      & Pre-accent  & e & e \\
-      & Else        & ə & ə \\
+    ə & \rm always & ə \\
+    \midrule
+    e & ə, o & ə \\
+      & e, a & e \\
+    \midrule
+    o & ə, e & ə \\
+      & o, a & o \\
+    \midrule
+    a & ə & ə \\
+      & e & e \\
+      & o & o \\
+      & a & a \\
     \bottomrule
 \end{tabular}
 \end{table}
