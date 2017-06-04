@@ -1,3 +1,7 @@
+Numbers Idea:
+Native system is quinary. Decimal system is partially borrowed from Tallarai,
+particularly in eastern branches, which had more contact with Tallar.
+
 Western:
 Vowel mergers!
 - e o a → eː e ɛ / _{-labial,+velar}
