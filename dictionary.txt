@@ -13,7 +13,7 @@ g.w-ŋʷo & kˈoww̃o & ɣˈoŋu & boat \\
 g.zd & kˈɨst & ɣˈəz & to be hard, to be sharp \\
 g.zd-twas & kˈazttwos & ɣˈazðtəwos & rock \\
 gʷ.ʔ` & pˈɨʔ & ɣwˈə & to lead \\
-gʷéʔ-ɠer & pˈeŋgeɹ & ɣwˈegiə & head \\
+gʷéʔ-ŋger & pˈeŋgeɹ & ɣwˈegiə & head \\
 h.jb` & ˈip & ˈiβ & to be patient (habitual) \\
 h.lh` & ˈl̩ː & ˈəl & to be yellow, (of a plant) to be ready for harvest \\
 h.ms` & ˈũs & ˈum & to be red \\
@@ -29,15 +29,15 @@ hlówk-jo-tus & lˈowgjodus & əlˈokitus & milk \\
 hr.` & ˈɹ̩ & ˈəɾ & to draw (perfective) \\
 hr.j & ɹˈi & əɾˈiː & to freeze \\
 hr.wt & ɹˈut & əɾˈut & to tie up, to capture \\
-hr.ɠ` & ˈɹ̩ŋg & ˈəɾ & to threaten \\
+hr.ŋg` & ˈɹ̩ŋg & ˈəɾ & to threaten \\
 hw.n & wˈə̃ & əwˈən & to sleep \\
 hw.s & ˈus & ˈus & to blow \\
 hw.ws & wˈus & əwˈus & to snow (generally used in the impersonal) \\
-hwés-ɠer & wˈeŋgeɹ & əwˈesgiə & wind \\
+hwés-ŋger & wˈeŋgeɹ & əwˈesgiə & wind \\
 hálh-twos & ˈaldwos & ˈaltəwos & wheat \\
 héjb-bet & ˈejbbet & ˈeββet & to wait for (perfective) \\
 hólh-tjor & ˈoldjoɹ & ˈoltəjoɾ & to grow (transitive), to farm (habitual) \\
-hólh-tjor-ɠr̩ & ˈoldjoŋgɹ̩̩ & ˈoltəjoɾgəɾ & farmer \\
+hólh-tjor-ŋgr̩ & ˈoldjoŋgɹ̩̩ & ˈoltəjoɾgəɾ & farmer \\
 hóst-jo-tus & ˈostjodus & ˈost͜ɕitus & board, plane \\
 hówt-jo-tus & ˈowdjodus & ˈot͜ɕitus & broth, tea \\
 j.jz & jˈis & jˈiz & to light a fire, (in the impersonal) the sun rose \\
@@ -56,13 +56,13 @@ k\∅z-ju & k\ˈɨzju & k\ˈʑu & metal \\
 keh-déh & kjedˈje & keðˈe & to meet \\
 khaw & khˈaw & əkˈɔː & north, left (of GEN) \\
 kj.t & kˈit & kˈit & to argue (usually used in the dual) \\
-kj.t-heɓ & kjˈethemb & əkjˈetub & to disagree (always used in the dual) \\
+kj.t-hemb & kjˈethemb & əkjˈetub & to disagree (always used in the dual) \\
 ks. & ksˈɨ & əksˈəː & to crumble \\
 ks.l & ksˈl̩ & əksˈəl & to fight \\
 ks.l-ŋʷo & ksˈolw̃o & əksˈolə̃u & weapon \\
 ks.s & ksˈɨs & əksˈəs & to drink \\
 ksó-jo-tus & ksˈojodus & əksˈojitus & sand \\
-kéz-ɠer & kˈeŋgeɹ & kˈezgiə & blacksmith \\
+kéz-ŋger & kˈeŋgeɹ & kˈezgiə & blacksmith \\
 kú-si & kˈuzi & kˈuɕ & rain \\
 kĺp-ʔ∅h & kˈl̩pɨʔɨ & kˈəlpə & necessity \\
 kʷ. & pˈɨ & kwˈəː & to cut, to shorten \\
@@ -86,12 +86,12 @@ lú-si & lˈuzi & lˈuɕ & darkness, night \\
 m.nh` & mˈə̃ː & mˈən & to love \\
 m.rt & mˈɹ̩t & mˈəɾ & to change (impersonal, continous), (without an object) time passes \\
 m.wh & mˈəw & mˈu & to be a person \\
-mért-ɠer & mˈeɹŋgeɹ & mˈeɾtgiə & Time (animate), passage of time, extent of time \\
+mért-ŋger & mˈeɹŋgeɹ & mˈeɾtgiə & Time (animate), passage of time, extent of time \\
 n.js` & nˈis & nˈis & to be alive, to live at LOC \\
-n.ɗ & ˈə̃nd & ˈən & to do slowly \\
-n.ɗ-heɓ & nˈendhemb & nˈedub & to be slow \\
+n.nd & ˈə̃nd & ˈən & to do slowly \\
+n.nd-hemb & nˈendhemb & nˈedub & to be slow \\
 nájs-lor & nˈajzloɹ & nˈɛsouə & house \\
-néjs-deh-ɠr̩ & nˈejsteŋgɹ̩̩ & nˈesigəɾ & baby, child \\
+néjs-deh-ŋgr̩ & nˈejsteŋgɹ̩̩ & nˈesigəɾ & baby, child \\
 néjs-hes-d∅h & nˈejshestɨ & nˈeɕsðə & to die \\
 néjs-hes-d∅h-gi & nˈejshestɨki & nˈeɕsðəɣi & death (dying) \\
 nís-si & nˈissi & nˈisɕ & life \\
@@ -100,7 +100,7 @@ nójs-jo-si & nˈojzjozi & nˈeɕusi & death (the condition of being dead) \\
 p. & pˈɨ & pˈəː & to carry, to pull \\
 p.kʷ & pˈɨp & pˈəwk & to satisfy (perfective) \\
 p.t & pˈɨt & pˈət & to be seated \\
-p.ɗ & pˈɨnd & pˈəd & to throw \\
+p.nd & pˈɨnd & pˈəd & to throw \\
 ph.s` & phˈɨs & əpˈəs & to peel, to remove ACC from the surface of GEN \\
 ph.t & phˈɨt & əpˈət & to be able to \\
 ph\∅s-ʔ∅h & ph\ˈɨsɨʔɨ & əp\ˈsə & skin \\
@@ -116,9 +116,9 @@ préjs-bet & pɹˈejspet & əpɾˈesβet & to differentiate oneself \\
 ps.t & psˈɨt & əpsˈət & to flow \\
 ps.t-twas & psˈattwos & əpsˈɛttus & river \\
 pw.ms` & pwˈũs & əpwˈum & to forgive, to forget, to lose \\
-pwéms-heɓ & pwˈemzhemb & əpwˈomsub & to be forgetful \\
+pwéms-hemb & pwˈemzhemb & əpwˈomsub & to be forgetful \\
 pwóms-jo & pwˈomzjo & əpwˈomɕu & to allow \\
-pé-ɠer & pˈeŋgeɹ & pˈegiə & bull, ox \\
+pé-ŋger & pˈeŋgeɹ & pˈegiə & bull, ox \\
 pókʷ-jo-si & pˈobjozi & pˈokiusi & peace \\
 p∅t-hes-déh & pɨtɨstˈje & pətəsðˈe & to stand up \\
 r.h & ˈɹ̩ː & ˈəɾ & to go, to traverse ACC \\
@@ -127,31 +127,31 @@ r.h` & ˈɹ̩ː & ˈəɾ & to put on clothing, to wear \\
 r.w` & ɹˈu & ɾˈuː & to be first \\
 r.z & ˈɹ̩s & ˈəɾ & to heal (transitive) \\
 r.z-ŋʷo & ɹˈozw̃o & ɾˈozə̃u & medicine \\
-réz-ɠer & ɹˈeŋgeɹ & ɾˈezgiə & healer \\
+réz-ŋger & ɹˈeŋgeɹ & ɾˈezgiə & healer \\
 s.h & sˈɨː & sˈə & to grasp (perfective) \\
 s.h-ŋʷo & sˈwow̃o & sˈoŋu & hand \\
 s.jk` & sˈik & sˈik & to enjoy (habitual) \\
 s.s & sˈɨs & sˈəs & to be white \\
-sl.h-heɓ & sl̩ˈjeemb & əslˈewb & to understand \\
+sl.h-hemb & sl̩ˈjeemb & əslˈewb & to understand \\
 sl.h` & sˈl̩ː & sˈəl & to teach ACC to LOC \\
 sl.j & slˈi & əslˈiː & to purify, to clean (perfective) \\
-sl.j-heɓ & slˈejemb & əslˈewb & to be a clean person \\
+sl.j-hemb & slˈejemb & əslˈewb & to be a clean person \\
 slóh-ŋʷo & sl̩ˈwow̃o & əslˈoŋu & mind \\
 sw.j & swˈi & əswˈiː & to moisten \\
 sw.j-ŋʷo & swˈojw̃o & əswˈoŋu & water \\
 sójk-jo & sˈojgjo & sˈekiu & to be happy, to be content \\
 t.k & tˈɨk & tˈək & to do quickly \\
 t.k & tˈɨk & tˈək & to value, to care about \\
-t.k-heɓ & tˈekhemb & tˈekub & to be fast \\
+t.k-hemb & tˈekhemb & tˈekub & to be fast \\
 t.kʷ & tˈɨp & tˈəwk & to be on the opposite side of \\
 t.l & tˈl̩ & tˈəl & to burn, to cook \\
 t.t & tˈɨt & tˈət & to be straight, to be direct \\
 th.d & thˈɨt & ətˈəð & to wake up \\
 th.lh & thˈl̩ː & ətˈəl & to know (a fact) \\
-th.lh-ʔraɠʷ & thˈalɹomb & ətˈaləɾog & to actively keep in mind \\
+th.lh-ʔraŋgʷ & thˈalɹomb & ətˈaləɾog & to actively keep in mind \\
 thélh-bet & thˈelbet & ətˈelβet & to recall \\
 tj.n & tjˈə̃ & ət͜ɕˈən & to obtain \\
-tj.n-ʔraɠʷ & tjˈanɹomb & ət͜ɕˈɛnɾog & to carry \\
+tj.n-ʔraŋgʷ & tjˈanɹomb & ət͜ɕˈɛnɾog & to carry \\
 tjen-lár & tjenlˈaɹ & ət͜ɕenlˈaɾ & store \\
 tjón-jo & tjˈonjo & ət͜ɕˈeɲu & to have \\
 tn.k & tˈə̃k & tˈən & to be ill \\
@@ -160,8 +160,8 @@ tol-ʔóh & tolɨʔˈwo & tolˈo & cook \\
 tr.` & tˈɹ̩ & tˈəɾ & to give \\
 tw.l & twˈl̩ & ətwˈəl & to fix or make with clay or pottery \\
 tw.l-ŋʷo & twˈolw̃o & ətwˈolə̃u & clay \\
-twél-ɠer & twˈeŋgeɹ & ətwˈelgiə & potter \\
-tél-ɠer & tˈeŋgeɹ & tˈelgiə & fire \\
+twél-ŋger & twˈeŋgeɹ & ətwˈelgiə & potter \\
+tél-ŋger & tˈeŋgeɹ & tˈelgiə & fire \\
 w.` & ˈu & ˈuː & to enlarge, to grow \\
 w.jg` & wˈik & wˈiɣ & to hear \\
 w.rt & wˈɹ̩t & wˈəɾ & to search for \\
@@ -175,19 +175,19 @@ zi & sˈi & zˈiː & that (relativizer) \\
 ŋeh-lár & ŋjelˈaɹ & ŋelˈaɾ & home \\
 ŋóh-jo & ŋˈwojo & ŋˈoju & to hide (transitive, imperfective) \\
 ŋón-jo-tus & ŋˈonjodus & ŋˈeɲitus & fruit \\
-ɓ.k & mbˈɨk & bˈək & to shout, to make a loud sound \\
-ɓ.k-heɓ & mbˈekhemb & bˈekub & to be loud \\
-ɓl.d & mbˈl̩t & bˈəl & to age \\
-ɓlód-jo-tus & mblˈodjodus & əblˈejitus & elder \\
-ɓw.` & mbˈu & bˈuː & to be strong \\
-ɗn.` & ndˈə̃ & dˈən & to be green, to be fertile \\
-ɗná-twos & ndnˈadwos & ədnˈɛtus & leaf, plant \\
-ɗné-deh & ndnˈedje & ədnˈej & (of a plant) to grow \\
-ɗwĺ-ʔ∅h & ndwˈl̩ʔɨ & ədwˈəl & tree \\
-ɠ.z & ŋgˈɨs & gˈəz & to dance \\
-ɠl.` & ŋgˈl̩ & gˈəl & to swim (habitual) \\
-ɠlé-ɠer & ŋglˈeŋgeɹ & əglˈegiə & fish \\
-ɠʷn.m & mbmˈũ & əwgnˈum & to beg for \\
+mb.k & mbˈɨk & bˈək & to shout, to make a loud sound \\
+mb.k-hemb & mbˈekhemb & bˈekub & to be loud \\
+mbl.d & mbˈl̩t & bˈəl & to age \\
+mblód-jo-tus & mblˈodjodus & əblˈejitus & elder \\
+mbw.` & mbˈu & bˈuː & to be strong \\
+ndn.` & ndˈə̃ & dˈən & to be green, to be fertile \\
+ndná-twos & ndnˈadwos & ədnˈɛtus & leaf, plant \\
+ndné-deh & ndnˈedje & ədnˈej & (of a plant) to grow \\
+ndwĺ-ʔ∅h & ndwˈl̩ʔɨ & ədwˈəl & tree \\
+ŋg.z & ŋgˈɨs & gˈəz & to dance \\
+ŋgl.` & ŋgˈl̩ & gˈəl & to swim (habitual) \\
+ŋglé-ŋger & ŋglˈeŋgeɹ & əglˈegiə & fish \\
+ŋgʷn.m & mbmˈũ & əwgnˈum & to beg for \\
 ɦesp & ˈesp & ˈes & yesterday \\
 ɦesp & ˈesp & ˈes & before \\
 ʔ.` & ʔˈɨ & ˈəː & to arrange, to count \\
