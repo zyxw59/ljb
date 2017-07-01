@@ -35,60 +35,19 @@ the onset and coda. Each category is optional, although the onset cannot be
 null. If both a plosive and a fricative are present, they must agree in voice.
 
 \subsection{Accent}
-The accent system of \Langname{} falls somewhere between a pitch accent and a
-tone system. Each syllable can carry either a high tone (\emph{acute}), a
-falling tone (\emph{grave}), or a neutral tone (\emph{weak}). However, each
-acute accent must be followed by a grave accent, and each grave accent must
-follow an acute accent. Some endings and monosyllabic words carry a
-\emph{circumflex} accent, which is pronounced in isolation as an acute accent
-followed by a grave accent. However, when followed by another word in the same
-prosodic group (\ie\ not followed by a pause of any kind), it becomes an acute
-accent, and influences the first syllable of the following word as if they were
-one word.
-
-When a weak syllable follows an acute accent, it gains a grave accent.
-Likewise, when a weak syllable precedes a grave accent, it gains an acute
-accent. When an acute accent would follow another acute accent, or a grave
-accent follow another grave accent, the sequence is replaced by an acute--grave
-sequence.
+Words in \Langname{} can either have a \emph{mobile} accent, meaning the
+location of the accent varies throughout the inflectional paradigm, or a
+\emph{static} accent, meaning the location of the accent is fixed on a
+particular syllable. In words with a mobile accent, the accent falls on the
+last syllable with a vowel other than {\ll ə}. If no such syllable exists, the
+word lacks an accent. In words with a static accent, it will be marked with an
+acute accent (´).
 
 \subsection{Vowels}
 \label{sec:vowels}
 There are four phonemic vowels in \Langname{}: {\ll ə}, {\ll e}, {\ll o}, and
-{\ll a}. Roots do not have any inherent vowel associated with them. When a
-root appears on its own, the position of the vowel will be marked with a dot
-(.) if the root is weak (no inherent accent), or an acute accent (´) if it is
-strong (inherent acute accent). Endings do carry an inherent vowel. The vowel
-of the first ending is know as the \emph{stem vowel}. If the root has an acute
-accent or grave accent, it takes the stem vowel, otherwise it takes {\ll ə}.
-
-A vowel with a grave accent changes depending on the stem vowel of the word,
-according to \cref{tab:ablaut}. An unaccented vowel (neutral tone) is always
-{\ll ə}.
-
-\begin{table}[h]
-\centering
-\caption{Ablaut}
-\label{tab:ablaut}
-\begin{tabular}{*{3}{>{\ll}c}}
-    \toprule
-    \rm Vowel & \rm Stem vowel & \rm Grave form \\
-    \midrule
-    ə & ə, e, o, a & ə \\
-    \midrule
-    e & ə, o & ə \\
-      & e, a & e \\
-    \midrule
-    o & ə, e & ə \\
-      & o, a & o \\
-    \midrule
-    a & ə & ə \\
-      & e & e \\
-      & o & o \\
-      & a & a \\
-    \bottomrule
-\end{tabular}
-\end{table}
+{\ll a}. {\ll ə} can only occur in unaccented syllables; the rest can occur
+anywhere.
 
 \subsection{Orthography}
 \Langname{} was never a written language, so we are free to use whatever
