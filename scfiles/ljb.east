@@ -6,17 +6,16 @@ cV = m n ŋ ŋʷ r l j w
 vV = ũ ə̃ ə̃ ũ  r̩ l̩ i u
 VV = {V} {vV} õ
 
-P = p  b  ɓ  m
-T = t  d  ɗ  n
-K = k  g  ɠ  ŋ
-W = kʷ gʷ ɠʷ
+P = p  b  mb  m
+T = t  d  nd  n
+K = k  g  ŋg  ŋ
+W = kʷ gʷ ŋgʷ
 H = ʔ h ɦ
 S = 0 s z
 R = r l j w ŋʷ
 C = {P} {T} {K} {W} {H} {S} {R}
 CC = {P} {T} {K} {W} {H} {S}
 
-B  = ɓ  ɗ  ɠ
 M  = mb nd ŋg
 N  = m  n  ŋ  m n ŋ
 Nt = p  t  k  b d g
