@@ -1,0 +1,59 @@
+// setup
+P = p b mb t d nd k g ŋg kʷ gʷ ŋgʷ ʔ
+F = s z h ɦ
+S = m n ŋ ŋʷ r j w l
+C = {P} {F} {S}
+V = a e o ə(?![̀́̂]) \.
+Vw = a e o ə .
+Va = á é ó ə́ ´
+Vg = à è ò ə̀ `
+Vc = â ê ô ə̂ \^
+VV = {V} {Va} {Vg} {Vc}
+
+// do accent arithmetic
+// circumflex not before end of prosodic group becomes acute
+{0:Vc} > {0:Va} / _{C}*\s+{C}+
+// anything after acute becomes grave
+{0:V} > {0:Vg} / {Va}{C}*\s*{C}+_
+{0:Va} > {0:Vg} / {Va}{C}*\s*{C}+_
+{0:Vc} > {0:Vg} / {Va}{C}*\s*{C}+_
+// grave after grave becomes weak
+{0:Vg} > {0:Vw} / {Vg}{C}+_
+// weak before grave becomes acute
+{0:V} > {0:Va} / _{C}+{Vg}
+
+// ablaut, assuming preëxisting vowels are correct base forms
+// categories
+aV = a á à â
+eV = e é è ê
+oV = o ó ò ô
+əV = ə ə́ ə̀ ə̂
+Vga = à è ò ə̀ à
+Vge = è è ə̀ ə̀ è
+Vgo = ò ə̀ ò ə̀ ò
+Vgə = ə̀ ə̀ ə̀ ə̀ ə̀
+
+// grave vowels
+// a-stem
+{0:Vg} > {0:Vga} / #{C}+{VV}{C}+{aV}({C}+{VV})*{C}+_
+{0:Vg} > {0:Vga} / #{C}+{VV}{C}+{aV}({C}+{VV})*{C}*\s*{C}+{VV}{C}+_
+// e-stem
+{0:Vg} > {0:Vge} / #{C}+{VV}{C}+{eV}({C}+{VV})*{C}+_
+{0:Vg} > {0:Vge} / #{C}+{VV}{C}+{eV}({C}+{VV})*{C}*\s*{C}+{VV}{C}+_
+// o-stem
+{0:Vg} > {0:Vgo} / #{C}+{VV}{C}+{oV}({C}+{VV})*{C}+_
+{0:Vg} > {0:Vgo} / #{C}+{VV}{C}+{oV}({C}+{VV})*{C}*\s*{C}+{VV}{C}+_
+// ə-stem
+{0:Vg} > {0:Vgə} / #{C}+{VV}{C}+{əV}({C}+{VV})*{C}+_
+{0:Vg} > {0:Vgə} / #{C}+{VV}{C}+{əV}({C}+{VV})*{C}*\s*{C}+{VV}{C}+_
+// acute initial vowels
+// a-stem
+´ > á / _{C}+{aV}
+// e-stem
+´ > é / _{C}+{eV}
+// o-stem
+´ > ó / _{C}+{oV}
+// ə-stem
+´ > ə́ / _{C}+{əV}
+// weak vowels
+{V} > ə

@@ -1,0 +1,60 @@
+V  = a e o ə
+Va = á é ó ə́
+Vg = à è ò ə̀
+Vc = â ê ô ə̂
+cV = m n ŋ ŋʷ r l j w
+vV = ũ ə̃ ə̃ ũ  r̩ l̩ i u
+VV = {V} {vV} õ
+
+P = p  b  mb  m
+T = t  d  nd  n
+K = k  g  ŋg  ŋ
+W = kʷ gʷ ŋgʷ
+H = ʔ h ɦ
+S = 0 s z
+R = r l j w ŋʷ
+C = {P} {T} {K} {W} {H} {S} {R}
+CC = {P} {T} {K} {W} {H} {S}
+
+M  = mb nd ŋg
+N  = m  n  ŋ  m n ŋ
+Nt = p  t  k  b d g
+
+// change to stress accent marking
+{0:Vc} > ˈ{0:V}
+{0:Va} > ˈ{0:V}
+{0:Vg} > {0:V}
+
+// syllabic consonants
+ə{0:cV} > {0:vV} ! _ˈ?{V}
+{0:cV}ə > {0:vV} ! {V}_̃
+{0:cV}ˈə > ˈ{0:vV} ! {V}_̃
+
+// õ
+oŋʷ > ow̃ / _ˈ{V}
+oŋʷ > õ
+
+// labiovelars become plain labials
+{0:W} > {0:P}
+// implosives become prenasals
+{0:B} > {0:M}
+// consonants (except liquids) disappear before prenasals
+{CC} > 0 / _{M}
+// glottals disappear between consonants or before initial consonants or after
+// final consonants
+{H} > 0 / #|{C}_{C}|#
+
+// ŋʷ becomes a homoörganic nasal + w following a stop
+ŋʷ > {0:N}w / {0:Nt}_
+// ŋʷ becomes w following a nasal
+ŋʷ > w / {N}_
+// ŋʷ becomes w̃ otherwise
+ŋʷ > w̃
+
+// nasals disappear before nasals
+{N} > 0 / _{N}
+// nasals assimilate to a following stop
+{N} > {0:N} / _{0:Nt}
+// nasals assimilate to a preceding stop
+{N} > {0:N} / {0:Nt}_
+
