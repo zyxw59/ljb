@@ -1,7 +1,5 @@
 V  = a e o ə
-Va = á é ó ə́
-Vg = à è ò ə̀
-Vc = â ê ô ə̂
+Va = á é ó
 cV = m n ŋ ŋʷ r l j w
 vV = ũ ə̃ ə̃ ũ  r̩ l̩ i u
 VV = {V} {vV} õ
@@ -21,9 +19,7 @@ N  = m  n  ŋ  m n ŋ
 Nt = p  t  k  b d g
 
 // change to stress accent marking
-{0:Vc} > ˈ{0:V}
 {0:Va} > ˈ{0:V}
-{0:Vg} > {0:V}
 
 // syllabic consonants
 ə{0:cV} > {0:vV} ! _ˈ?{V}
