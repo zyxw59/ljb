@@ -10,6 +10,8 @@ V0 = {Vg} ə
 V1 = {Vu} {V0}
 
 // do accent arithmetic (much simpler now!)
+// get rid of accents after the first one
+{0:Va} > {0:Vu} / {Va}({C}+{V1})*{C}+_
 // last non-schwa if no accent present
 {0:Vu} > {0:Va} / #({C}+{V1})*{C}+_({C}+{V0})*{C}*#
 // make graves into unaccented vowels
