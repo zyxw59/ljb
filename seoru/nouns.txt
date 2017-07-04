@@ -1,0 +1,112 @@
+all:
+nom.s: -s
+nom.p: -∅
+
+1a:
+acc.s: -i
+acc.p: second stem, -∅, ultimate stress
+loc: second stem, -ru/-zu, penult stress
+
+əuklegxṓis/əuklegxḗ
+əťenlā́rs/əťenlár
+ətseṓs/ətseó
+gelā́rs/gelár
+iezṓs/iezó
+nēsezðə́xis/nēsezðəxí
+tolṓs/toló
+təgkšs/təgksí
+
+1b:
+loc: -rā/-zā, penult stress
+
+əðlónuns/əðloggṓ
+əksóluns/əksolggṓ
+əlúkius/əlukiū́
+əsuḗuuns/əsueuggṓ
+ətuóluns/ətuolggṓ
+góggus/goggṓ
+kṓggus/kōggṓ
+iə́ňus/iəňū́
+iónuns/ioggṓ
+kə́žus/kəžū́
+rózuns/rozgṓ
+sóggus/soggṓ
+
+1c:
+loc: -r/-z, ultimate stress
+
+kūšs/kūsí
+nešóšs/nešosí
+nišs/nissí
+pōkióšs/pōkiosí
+
+2a:
+acc.s: -i, antepenult stress
+acc.p: -j, ultimate stress
+loc: -ə/-∅, penult stress
+
+altuós/áltuusi
+əbloiotús/əbloiótusi
+ədnatuós/ədnátuusi
+əglēgérs/əglḗgiri
+əksōiotús/əksōiótusi
+əlōkiotús/əlōkiótusi
+ətuelgérs/ətuélgiri
+əuezgérs/əuézgiri
+goňotús/goňótusi
+kuegérs/kuégiri
+kezgérs/kézgiri
+mergérs/mérgiri
+nēzðegə́rs/nēzðégri
+nɛslórs/nɛ́sluri
+olťorgə́rs/olťógri
+osťotús/osťótusi
+ōťotús/ōťótusi
+pēgérs/pḗgiri
+rezgérs/rézgiri
+telgérs/télgiri
+
+2b:
+acc.p: second stem, -∅, ultimate stress
+loc: third stem, -rā/-zā, penult stress
+
+artuós/ertuás/ərtuésrā
+ðélðuis/ðelðuḗ/ðəlðúrā
+əprɛxtuós/əprēxtuás/pərxtuésrā
+əpsattuós/əpsettuás/əpsətuésrā
+kaðtuós/keðtuás/keðtuésrā
+lɔttuós/lottuás/luttuésrā
+
+2c:
+loc: -rā/-zā, penult stress
+
+iizúks/iízuki
+
+3:
+acc.s: -j
+acc.p: -∅
+loc: -r/-z, ultimate stress
+
+əplóggus/əplógguj
+əslóggus/əslógguj
+
+4:
+acc.s: second stem, -j, ultimate stress
+acc.p: -j, ultimate stress
+loc: -r/-z, ultimate stress
+
+ðumə́s/ðúmi
+əduələ́s/əduə́ľ
+əpəsə́s/əpə́š
+kəlpə́s/kə́lpi
+olós/ólui
+
+Irregular:
+mūs/mɔ̄i/móra//mū/mu/mózā
+
+Pronouns:
+us/uɛ̄i/uérā//ətə́/ətí/ətér
+sə̄ns/sāň/sénrā//sə̄n/sən/sénzā
+kəs/kɛ̄/kā́ru//kə/kə̄/kā́zu
+—/ðɛ̄/əðrā́//—/ðə/əzzā́
+ðūts/əðuā́ť/əðuétrā//ðūt/ðut/əðuédzā

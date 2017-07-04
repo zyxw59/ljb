@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{expex}
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{threeparttable}
+\usepackage{multicol}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fullpage}
+\usepackage{vowel}
+
+\setmainfont{CMU Serif}
+
+\catcode`∅=13 % <Multi_key> <slash> <0>
+\def ∅{$\varnothing$}
+
+\def\∅{$\acute\varnothing$}
+
+\def\^{\textsuperscript}
+\def\_{\textsubscript}
+
+\def\ll{\itshape}
+\def\en{\normalfont}
+\def\qq#1{‘#1’}
+\def\dq#1{“#1”}
+\def\Langname{Old Dnálori}
+
+\def\eg{e.\,g.}
+\def\ie{i.\,e.}
+
+\lingset{everyglpreamble=\ll,everygla=\ll}
+
+\renewcommand{\TPTminimum}{\linewidth}
+
+\begin{document}
+\pagenumbering{roman}
+
+\title{\Langname{} Language}
+\author{Emily Crandall Fleischman}
+\date{}
+\maketitle
+
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+
+\end{document}

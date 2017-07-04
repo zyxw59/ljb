@@ -1,0 +1,35 @@
+2a
+altuós/áltuus- `yellow; ready'
+bloiotús/bloiótus- `old'
+buatuós/buátuus- `strong'
+dnatuós/dnátuus- `green'
+ɛvtuós/ɛ́vtuus- `patient'
+vrɛxtuós/vrɛ́xtuus- `brown'
+xuə̄́s/xuə́- `leading; ahead of {\sc acc}'
+
+2b
+artuós/ártuus- `blue'
+astuós/ástuus- `flat'
+dualtuós/duáltuus- `branched'
+ðaltuós/ðáltuus- `full'
+ərɛstuós/ərɛ́tuus- `frozen; cold'
+ərōttuós/ərṓttus- `bound; captured'
+əuantuós/əuántuus- `asleep'
+ɔnstuós/ɔ́ntuus- `red'
+ɔttuós/ɔ́ttuus- `boiled; clean'
+xastuós/xástuus- `sharp'
+
+
+Irregular:
+-lā́s/-lā́i/-lə // -lā́r/-lár/-láro
+allā́s `low; under {\sc loc}'
+etlā́s `westerly; west of {\sc acc}'
+iēzlā́s `easterly; east of {\sc acc}'
+ionlā́s `central; in the middle of {\sc loc}; from {\sc acc}'
+kɔlā́s `northerly; north of {\sc acc}'
+lā́s `here; nearby; by {\sc loc}'
+malā́s `distant; yonder; far away from {\sc acc}'
+tellā́s `southerly; south of {\sc acc}'
+uollā́s `at home; in {\sc acc}'
+vəlā́s `inside; in {\sc loc}; on {\sc loc}'
+

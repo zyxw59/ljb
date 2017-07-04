@@ -1,0 +1,121 @@
+First person:
+        s       d       p
+NOM     us              t
+ACC     uh      qh      th
+GEN     ui              thih
+LOC     ur      qs      trh
+
+Second person:
+        s       d       p
+NOM     sns             sh
+ACC     snh     sni     sh
+GEN     sni             sni
+LOC     snr     sns     snrh
+
+Third person animate:
+        s       d       p
+NOM     ks              k
+ACC     kh      ki      kh
+GEN     ki              kih
+LOC     kr      ks      krh
+
+Third person inanimate:
+        s       d       p
+ACC     th      ti      th
+INS     ti      tii     tih
+GEN     ti              tih
+LOC     tr      ts      trh
+
+Interrogative:
+        s       d       p
+NOM     tuts    tuti    tuth
+ACC     tuth    tuti    tuthh
+INS     tuti    tutii   tutih
+GEN     tuti            tutih
+LOC     tutr    tuts    tutrh
+
+Reflexive:
+        s       d       p
+ACC     th      ti      thh
+GEN     ti              tih
+LOC     tr      ts      trh
+
+Animate:
+bltitus-  elder
+glgr-     fish
+hltirgr-  farmer
+iisqu-    sun
+kgr-      blacksmith
+mrgr-     Time
+muht-     man, person
+nistgr-   child
+pgr-      bull, ox
+qlqh-     god
+rgr-      healer
+tlqh-     cook
+tsiqh-    wolf
+tulgrs-   potter
+ugr-      wind
+
+         s       d       p
+NOM     -s      -i      -0
+ACC     -h      -ih     -h
+GEN     -i      -ii     -ih
+LOC     -r      -s      -rh
+
+Inanimate:
+hltus-    wheat
+hrtus-    sky
+hstitus-  table, bench
+hutitus-  soup
+iishk-    morning
+iŋiu-     light
+iŋũ-      eye
+klpq-     necessity
+ksitus-   sand
+kslũ-     weapon, metal tool
+kusi-     rain, tear
+kũ-       boat
+ksiu-     metal
+ksttus-   rock
+liũ-      name
+lukitus-  milk
+lusi-     darkness, night
+luttus-   land, kingdom
+lũlr-     mountain, slope
+mrgr-     passage of time, extent of time
+muhh-     people
+muhm-     village, homeland
+nislr-    house
+nishstki- death
+nisitusm- the afterlife
+nissi-    life
+ŋhlr-     home
+ŋhũ-      reed
+ŋnitus-   fruit
+pgr-      head
+phsq-     skin
+pisi-     pain
+plhũ-     feather
+plkki-    work, task
+ppisi-    peace
+prktus-   wooden tool
+psttus-   river
+rhũ-      cloth, clothing
+rsũ-      medicine, tea
+shũ-      hand
+slhũ-     mind
+suiũ-     water
+tiŋlr-    store
+tlgr-     fire
+tltu-     pot, stew
+tlnu-     wheel
+tŋksi-    illness
+tulũ-     clay
+tũqh-     food
+
+         s       d       p
+ACC     -h      -ih     -hh
+INS     -i      -ii     -ih
+GEN     -i      -ii     -ih
+LOC     -r      -s      -rh

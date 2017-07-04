@@ -1,0 +1,122 @@
+bk-     shout, yell
+blt-    age
+bmm-    beg for, plead
+bu-     strong
+dn-     green, fertile, beautiful
+gl-     swim
+gs-     dance
+hip-    patient
+hlh-    yellow, ready
+hms-    red
+hr-     blue
+hst-    press, flatten
+ht-     put, place
+hut-    boil
+iis-    light a fire
+ik-     shrink, withdraw
+in-     see
+kh-     know a person
+kit-    argue
+klp-    need, lack
+kn-     separate, divide
+ks-     crumble, reshape, blacksmith
+ksl-    fight
+kss-    drink
+kst-    hard, sharp
+ku-     sail
+li-     speak
+lik-    finish
+lm-     large
+lp-     warm
+lr-     arrive
+lu-     dark
+luk-    milk a cow
+lut-    extend over an area, rule
+mn-     love
+mrt-    change
+n-      drop, lose
+nd-     slowly
+nis-    live
+nh-     shelter
+ŋn-     blossom, bloom
+p-      cut, shorten
+p-      carry, pull
+pd-     throw
+phs     peel
+pi-     injure
+pit-    lie
+plh-    fly
+plh-    leak
+plk-    work
+pp-     satisfy
+pq-     lead, demand
+pris-   stand out
+prk-    brown, dull, thin, worn out
+prk-    twist, bend
+pst-    flow
+pt-     try
+pt-     seated
+pums-   forget, let go, forgive
+q-      arrange, count, prepare
+ql-     create, invent
+rg-     threaten
+rh-     wear
+rh-     go
+ri-     freeze
+rs-     heal
+ru-     first
+rut-    capture, bind, enclose
+sh-     grasp
+sik-    enjoy
+slh-    teach
+sli-    purify, clean
+srhk-   shine
+ss-     white
+ssp-    cross
+sui-    moisten
+thlh-   know a fact
+tht-    wake up
+tin-    obtain
+tk-     quickly
+tk-     value, care for
+tl-     burn, cook
+tlk-    decide
+tlu-    fill
+tn-     eat
+tnk-    ill
+tp-     opposite
+tr-     give
+tsi-    hunt
+tt-     straight, direct
+tul-    fix with clay
+u-      grow
+uik-    hear
+un-     sleep
+urt-    search for
+us-     blow
+ut-     walk
+ũk-     follow
+
+Imperfective root verbs:
+Indicative
+PRS      s       d       p
+0       -h
+1       -u      -i      -tht
+2       -sn     -sis    -sht
+3       -kq     -ki     -kht
+PST      s       d       p
+0       -hh
+1       -hn     -hi     -ht
+2       -hns    -his    -hs
+3       -hk     -hki    -hk
+Subjunctive
+PRS      s       d       p
+0       -h
+1       -un     -i      -tt
+2       -sn     -sis    -st
+3       -kq     -ki     -kt
+PST      s       d       p
+0       -rhh
+1       -rhn    -rhi    -rht
+2       -rhns   -rhis   -rhs
+3       -rhk    -rhki   -rhk

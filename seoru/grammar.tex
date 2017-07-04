@@ -1,0 +1,303 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{expex}
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{threeparttable}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multicol}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
+\usepackage{fullpage}
+\usepackage{enumitem}
+\usepackage{vowel}
+
+\setlist[itemize]{noitemsep, nolistsep}
+
+\setmainfont{CMU Serif}
+
+\newfontface\uifont{CMU Serif Upright Italic}
+\newfontface\slfont{CMU Serif Roman Slanted}
+
+\catcode`∅=13 % <Multi_key> <slash> <0>
+\def ∅{$\varnothing$}
+
+\def\∅{$\acute\varnothing$}
+
+\def \^{\textsuperscript}
+\def \_{\textsubscript}
+
+\def\ls{\uifont}
+\def\ll{\slfont}
+\def\en{\normalfont}
+
+\def \qq #1{‘#1’}
+\def \dq #1{“#1”}
+\def \slashes #1{{\rm /#1/}}
+\def \Langname{Old {\ls Seóru}}
+
+\def \cca{\cellcolor{yellow!25}}
+\def \ccb{\cellcolor{red!25}}
+\def \ccc{\cellcolor{green!25}}
+
+\lingset{everyglpreamble=\ls,everygla=\ls}
+
+\renewcommand{\TPTminimum}{\linewidth}
+
+\begin{document}
+\pagenumbering{roman}
+
+\title{\Langname{} Language}
+\author{Sasha Crandall Fleischman}
+\date{}
+\maketitle
+
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\section{Phonology}
+
+\subsection{Consonants}
+\begin{table}[h]
+\centering
+\caption{Consonants}
+\label{tab:consonants}
+\begin{tabu} spread 0pt {l*{8}{X[c]}}
+    \toprule
+    & \multicolumn{2}{c}{Labial} & \multicolumn{2}{c}{Alveolar} &
+    \multicolumn{2}{c}{Palatal} & \multicolumn{2}{c}{Velar} \\
+    \midrule
+    Plosive     & p   & b & t     & d   & t͜ɕ & d͜ʑ   & k   & ɡ   \\
+    Fricative   & [ɸ] & β & s [θ] & z ð & ɕ  & ʑ    & [x] & ɣ   \\
+    Nasal       &     & m &       & n   &    & ɲ    &     & [ŋ] \\
+    Approximant &     & w &       & ɾ   &    & ɾʲ j &     &     \\
+    Lateral     &     &   &       & l   &    & ʎ    &     &     \\
+    \bottomrule
+\end{tabu}
+\end{table}
+
+The consonants are shown on \cref{tab:consonants}. The sounds listed in
+brackets only occur as allophones of other sounds:
+\begin{itemize}
+    \item The voiceless fricatives [ɸ θ x] occur as allophones of /β ð ɣ/
+        before voiceless consonants.
+    \item{} [ŋ] occurs as an allophone of /ɡ/ after vowels.
+\end{itemize}
+
+\subsection{Vowels}
+\begin{table}[h]
+    \centering
+    \caption{Vowels}
+    \label{tab:vowels}
+    \begin{vowel}
+        \putcvowel{i}{1}
+        \putcvowel{e}{2}
+        \putcvowel{ɛ}{3}
+        \putvowel{a}{3\vowelhunit}{3\vowelvunit}
+        \putcvowel{ə}{11}
+        \putcvowel{u}{8}
+        \putcvowel{o}{7}
+        \putcvowel{ɔ}{6}
+    \end{vowel}
+\end{table}
+
+\subsection{Orthography}
+
+
+\clearpage
+\section{Nouns}
+
+Nouns in \Langname{} inflect for three cases -- nominative, accusative, and
+locative -- and two numbers -- singular and plural.
+
+There are five inflection paradigms, grouped into two declensions. The
+different colors represent alternate stems.
+
+\begin{multicols}{2}
+    \subsection*{First Declension}
+    \subsubsection*{1a}
+    \begin{tabu} spread 0pt {>{\sc}c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        nom & \cca -s & \cca -∅ \\
+        acc & \cca -i & \ccb -∅ \\
+        loc & \ccb -r & \cca -z \\
+        \bottomrule
+    \end{tabu}
+
+    \subsubsection*{1b}
+    \begin{tabu} spread 0pt {>{\sc}c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        nom & \cca -s  & \cca -∅  \\
+        acc & \cca -i  & \ccb -∅  \\
+        loc & \ccb -rā & \ccb -zā \\
+        \bottomrule
+    \end{tabu}
+
+    \subsubsection*{1c}
+    \begin{tabu} spread 0pt {>{\sc}c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        nom & \cca -s  & \cca -∅  \\
+        acc & \cca -i  & \ccb -∅  \\
+        loc & \ccb -ru & \ccb -zu \\
+        \bottomrule
+    \end{tabu}
+
+    \columnbreak
+    \subsection*{Second Declension}
+    \subsubsection*{2a}
+    \begin{tabu} spread 0pt {>{\sc}c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        nom & \cca -s & \cca -∅ \\
+        acc & \ccb -i & \cca -i \\
+        loc & \cca -r & \ccb -z \\
+        \bottomrule
+    \end{tabu}
+
+    \subsubsection*{2b}
+    \begin{tabu} spread 0pt {>{\sc}c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        nom & \cca -s & \cca -∅ \\
+        acc & \ccb -i & \cca -i \\
+        loc & \cca -rā & \cca -zā \\
+        \bottomrule
+    \end{tabu}
+\end{multicols}
+
+\clearpage
+
+\section{Verbs}
+
+\begin{multicols}{2}
+
+    \subsection*{Weak Root}
+    \begin{tabu} spread 0pt {c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \ccb -uun & \cca -iis \\
+        2nd person & \cca -sn  & \cca -s   \\
+        3rd person & \cca -ki  & \cca -kē  \\
+        \bottomrule
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \ccb -un & \cca -ē   \\
+        2nd person & \cca -in & \cca -ēs  \\
+        3rd person & \cca -ēk & \cca -ḗki \\
+        \bottomrule
+    \end{tabu}
+
+    \subsection*{Strong Root}
+    \begin{tabu} spread 0pt {c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \ccb -uun & \cca -iis \\
+        2nd person & \ccc -sun & \ccc -s   \\
+        3rd person & \cca -ki  & \cca -kē  \\
+        \bottomrule
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \ccb -un & \cca -ē   \\
+        2nd person & \cca -in & \cca -ēs  \\
+        3rd person & \cca -ēk & \cca -ḗki \\
+        \bottomrule
+    \end{tabu}
+
+    \subsection*{Strong Ending Stem}
+    \begin{tabu} spread 0pt {c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \cca -un & \ccb -i  \\
+        2nd person & \cca -sn & \cca -s  \\
+        3rd person & \cca -k  & \cca -ki \\
+        \bottomrule
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \cca -un & \cca -ē   \\
+        2nd person & \cca -in & \cca -ēs  \\
+        3rd person & \cca -ēk & \cca -éki \\
+        \bottomrule
+    \end{tabu}
+
+    \subsection*{Strong Root Stem}
+    \begin{tabu} spread 0pt {c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \cca -un & \ccb -i  \\
+        2nd person & \cca -sn & \cca -s  \\
+        3rd person & \cca -k  & \cca -ki \\
+        \bottomrule
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \cca -n & \cca -i  \\
+        2nd person & \cca -n & \cca -s  \\
+        3rd person & \cca -k & \cca -ki \\
+        \bottomrule
+    \end{tabu}
+
+    \subsection*{Weak Stem}
+    \subsubsection*{-ə́run/-rḗ-, -kuə́lkun/-klḗk-}
+    \begin{tabu} spread 0pt {c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \cca -un & \cca -i  \\
+        2nd person & \cca -sn & \cca -s  \\
+        3rd person & \cca -k  & \cca -ki \\
+        \bottomrule
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \cca -un & \cca -ē   \\
+        2nd person & \cca -n  & \cca -s   \\
+        3rd person & \ccb -ēk & \ccb -ḗki \\
+        \bottomrule
+    \end{tabu}
+
+    \subsection*{-ðuénsun/-ðuə́ns-, -óbun/-ə́b-}
+    \begin{tabu} spread 0pt {c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \cca -un & \cca -i  \\
+        2nd person & \ccb -sn & \ccb -s  \\
+        3rd person & \cca -k  & \cca -ki \\
+        \bottomrule
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \ccb -un & \ccb -ē   \\
+        2nd person & \cca -n  & \cca -s   \\
+        3rd person & \cca -ēk & \cca -ḗki \\
+        \bottomrule
+    \end{tabu}
+
+    \subsection*{-rɔ́gun/-róg-/-rṓg-}
+    \begin{tabu} spread 0pt {c*{2}{>{\ls}X[c]}}
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \cca -un & \cca -i  \\
+        2nd person & \ccb -sn & \ccb -s  \\
+        3rd person & \ccc -k  & \ccc -ki \\
+        \bottomrule
+        \toprule
+        & \en Singular & \en Plural \\ \midrule
+        1st person & \ccb -un & \ccb -ē   \\
+        2nd person & \ccc -n  & \ccc -s   \\
+        3rd person & \cca -ēk & \cca -ḗki \\
+        \bottomrule
+    \end{tabu}
+
+\end{multicols}
+
+\clearpage
+\section{Example Sentences}
+
+\appendix
+
+\end{document}
+
