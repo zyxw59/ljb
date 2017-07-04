@@ -25,11 +25,6 @@ C = {Cp} {Ct} {Ck} {Cw} {Ch} {approx}
 ə{0:sylCons} > {0:vocCons} ! _ˈ?{V}
 {0:sylCons}ə > {0:vocCons} ! {V}_
 
-// more accent arithmetic, but i and u can be accented
-V0 = {sylCons1} ə
-Vu1 = a e o i u
-{0:Vu1} > ˈ{0:Vu1} / #({C}+{V})*{C}+_({C}+{V0})*{C}*#
-
 // vowel shifts
 // current (late ljb) system:
 // i u e ə o a ũ ə̃ r̩ l̩
@@ -62,15 +57,18 @@ e > oː / _{Cw}
 {0:vocCons1} > {0:sylCons1} / {V}ː?_
 // ...otherwise, ũ becomes um...
 ũ > um
-// ...and everything else becomes a schwa plus consonant:
+// ...and the rest become a schwa plus consonant:
 {0:vocCons1} > ə{0:sylCons1}
 
 // lengthening of u and i
 // wu ji > uː iː / except after vowels
 wu > uː ! {V}ː?_
-wˈu > ˈuː ! {V}ː?_
 ji > iː ! {V}ː?_
-jˈi > ˈiː ! {V}ː?_
+
+// more accent arithmetic, but i and u can be accented
+V1 = i u e o ɛ a ɔ
+V = {V1} ə
+{0:V1} > ˈ{0:V1} / #({C}*{V}ː?)*{C}*_({C}*ə)*{C}*#
 
 // loss of hə and ɦə
 // lengthen previous vowel, or disappear if it's already long:
