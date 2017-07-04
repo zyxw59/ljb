@@ -1,0 +1,152 @@
+Vu = a e o ə
+Va = á é ó
+sylCons = m n ŋ ŋʷ r l j w
+vocCons = ũ ə̃ ə̃ ũ  r̩ l̩ i u
+vocCons1 = ũ ə̃ r̩ l̩
+sylCons1 = m m r l
+V  = {Vu} {vocCons} ɛ ɔ
+
+Vo = u o ɔ
+Ve = i e ɛ
+Və =   ə a
+
+Cp = p  b  mb  β m
+Ct = t  d  nd  ð n s z
+Ck = k  g  ŋg  ɣ ŋ
+Cw = kʷ gʷ ŋgʷ 0 ŋʷ
+Ch = ʔ ɦ h
+approx = r l j w
+C = {Cp} {Ct} {Ck} {Cw} {Ch} {approx}
+
+// change to stress accent marking
+{0:Va} > ˈ{0:Vu}
+
+// syllabic consonants
+ə{0:sylCons} > {0:vocCons} ! _ˈ?{V}
+{0:sylCons}ə > {0:vocCons} ! {V}_
+
+// more accent arithmetic, but i and u can be accented
+V0 = {sylCons1} ə
+Vu1 = a e o i u
+{0:Vu1} > ˈ{0:Vu1} / #({C}+{V})*{C}+_({C}+{V0})*{C}*#
+
+// vowel shifts
+// current (late ljb) system:
+// i u e ə o a ũ ə̃ r̩ l̩
+// approximate goal:
+// i u e ə o ɛ a ɔ + length?
+
+// a > ɛ / before velars
+a > ɛ / _{Ck} ! _{Cw}
+// the negative condition is to block it before labiovelars
+// a > ɔ / before labials and labiovelars
+a > ɔ / _{Cw}|{Cp}
+// aj aw > ɛː ɔː / except before vowels
+aj > ɛː ! _ˈ?{V}
+aw > ɔː ! _ˈ?{V}
+
+// o > eː / before velars
+o > eː / _{Ck} ! _{Cw}
+// oj ej > eː / except before vowels
+[oe]j > eː ! _ˈ?{V}
+// e > oː / before labiovelars
+e > oː / _{Cw}
+// ow ew > oː / except before vowels
+[oe]w > oː ! _ˈ?{V}
+
+// ə > o / before labiovelars
+ə > o / _{Cw}
+
+// desyllabification
+// to a consonant after a vowel...
+{0:vocCons1} > {0:sylCons1} / {V}ː?_
+// ...otherwise, ũ becomes um...
+ũ > um
+// ...and everything else becomes a schwa plus consonant:
+{0:vocCons1} > ə{0:sylCons1}
+
+// lengthening of u and i
+// wu ji > uː iː / except after vowels
+wu > uː ! {V}ː?_
+wˈu > ˈuː ! {V}ː?_
+ji > iː ! {V}ː?_
+jˈi > ˈiː ! {V}ː?_
+
+// loss of hə and ɦə
+// lengthen previous vowel, or disappear if it's already long:
+[hɦ]ə > ː / {V}_
+[hɦ]ə > 0 / {V}ː_
+// lost between consonants
+[hɦ]ə > 0 / {C}_{C}
+// lost initially before s
+[hɦ]ə > 0 / #_s
+// note that hə and ɦə are retained word-initially (except before s), before
+// vowels, and after final consonants
+
+// now for consonants
+
+// delabialization:
+// adjacent to rounded vowels
+{0:Cw} > {0:Ck} / {Vo}ː?_
+{0:Cw} > {0:Ck} / _ˈ?{Vo}
+// adjacent to w
+{0:Cw} > {0:Ck} / w_
+{0:Cw} > {0:Ck} / _w
+// between consonants
+{0:Cw} > {0:Ck} / {C}_{C}
+// w offglide before vowels
+{0:Cw} > {0:Ck}w / _ˈ?{V}
+// labiovelars can't follow unrounded vowels, so we're done!
+
+// at this point, we should define consonants by moa
+nas = m n ŋ
+preNas = mb nd ŋg
+vdPlos = b  d  g
+vlPlos = p  t  k
+vdFric = z ɦ
+vlFric = s h
+
+// nasal assimilation
+// nasals disappear before other nasals
+{nas} > 0 / _{nas}
+// assimilation to following consonant
+{nas} > m / _{Cp}
+{nas} > n / _{Ct}
+{nas} > ŋ / _{Ck}
+
+// loss of h and ɦ between consonants
+[hɦ] > 0 / {C}_{C}
+
+// voicing assimilation
+// consonants with voicing contrast
+vdCons = {vdPlos} {vdFric}
+vlCons = {vlPlos} {vlFric}
+// all consonants which affect voicing assimilation
+vdCons1 = {vdCons} {nas} {preNas}
+vlCons1 = {vlCons} ʔ
+// consonants that don't interfere with voicing assimilation
+vCons = {vdCons} {vlCons}
+// approximants don't affect voicing assimilation, so they are ignored here
+// clusters with s always devoice, if possible:
+{0:vdCons} > {0:vlCons} / _{vCons}*s
+{0:vdCons} > {0:vlCons} / s{vCons}*_
+// otherwise, the second element wins:
+{0:vdCons} > {0:vlCons} / _{vCons}*{vlCons1}
+{0:vlCons} > {0:vdCons} / _{vCons}*{vdCons1}
+
+// chain shift: prenasals > voiced plosives > voiced fricatives
+Vric = β  ð  ɣ
+
+{0:vdPlos} > {0:Vric} ! {nas}_
+{0:preNas} > {0:vdPlos}
+
+// finally, ɦ > ɣ merger except after nasals, where ɣ is disallowed
+ɦ > ɣ ! {nas}_
+// and a strange one, by analogy:
+// h > k / where it could from devoicing of ɦ
+h > k / _{vlCons1}
+h > k / s_
+
+// degemination in clusters and word initially/finally
+{0:C}{0:C} > {0:C} / #|{C}_
+{0:C}{0:C} > {0:C} / _#|{C}
