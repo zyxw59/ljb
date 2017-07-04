@@ -1,8 +1,9 @@
 Vu = a e o ə
 Va = á é ó
 sylCons = m n ŋ ŋʷ r l j w
-vocCons = ũ ə̃ ə̃ ũ  r̩ l̩ i u
-vocCons1 = ũ ə̃ r̩ l̩
+// n̩ doesn't interfere with ə like ə̃ does
+vocCons = ũ n̩ n̩ ũ  r̩ l̩ i u
+vocCons1 = ũ n̩ r̩ l̩
 sylCons1 = m m r l
 V  = {Vu} {vocCons} ɛ ɔ
 
@@ -27,7 +28,7 @@ C = {Cp} {Ct} {Ck} {Cw} {Ch} {approx}
 
 // vowel shifts
 // current (late ljb) system:
-// i u e ə o a ũ ə̃ r̩ l̩
+// i u e ə o a ũ n̩ r̩ l̩
 // approximate goal:
 // i u e ə o ɛ a ɔ + length?
 
