@@ -92,7 +92,7 @@ V = {V1} ə
 {0:Cw} > {0:Ck} / w_
 {0:Cw} > {0:Ck} / _w
 // between consonants
-{0:Cw} > {0:Ck} / {C}_{C}
+{0:Cw} > {0:Ck} / #|{C}_#|{C}
 // w offglide before vowels
 {0:Cw} > {0:Ck}w / _ˈ?{V}
 // labiovelars can't follow unrounded vowels, so we're done!
