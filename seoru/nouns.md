@@ -11,6 +11,12 @@ Animate
 - kézŋgerəs -> kézgerəs
 - məwhhətəs -> muktəs
 - mortŋgerəs -> morðgerəs
+- pəŋgerəs -> pəgerəs
+- ʔálʔohəs -> ʔálʔoːs
+- rezŋgerəs -> rezgerəs
+- tolʔohəs -> tolʔoːs
+- tsojʔohəs -> tseːʔoːs
+- twəlŋgerəs -> twəlgerəs
 
 | Sing | Dual | Plural |
 |------|------|--------|
@@ -37,6 +43,14 @@ Inanimate
 - lomlarhè -> lomlarhe
 - lówttwashè -> lóːtwaske
 - mortŋgerhè -> morðgerhe
+- nájslarhè -> nɛ́ːslarhe
+- ŋánjotwashè -> ŋánjotwashe
+- ŋohlarhè -> ŋohlarhe
+- phəsʔəhhè -> psʔəkhe
+- pregtwashè -> prektwaske
+- psettwashè -> psetwaske
+- təlŋgerhè -> təlgerhe
+- tjanlarhè -> tjanlarhe
 
 | Sing | Dual | Plural |
 |------|------|--------|
@@ -66,6 +80,14 @@ Inanimate
 - gowŋʷohè -> ɣoːŋohe
 - ksolŋʷohè -> ksolŋohe
 - lajŋʷohè -> lɛːŋohe
+- ŋohŋʷohè -> ŋoɣŋohe
+- pláhŋʷohè -> pláɣŋohe
+- ráhŋʷohè -> ráɣŋohe
+- rezŋʷohè -> rezŋohe
+- sahŋʷohè -> saɣŋohe
+- sláhŋʷohè -> sláɣŋohe
+- swojŋʷohè -> sweːŋohe
+- twəlŋʷohè -> twəlŋohe
 
 | Sing | Dual | Plural |
 |------|------|--------|
@@ -80,6 +102,10 @@ Inanimate
 - kézjəwhè -> kézjuhe
 - kʷojjosəjhè -> kojosihe
 - láwsəjhè -> lɔ́ːsihe
+- nájsjosəjhè -> nɛ́ːsjosihe
+- nájssəjhè -> nɛ́ːsihe
+- pəkʷjosəjhè -> poːkjosihe
+- tneksəjhè -> ðneksihe
 
 | Sing | Dual | Plural |
 |------|------|--------|
