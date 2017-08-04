@@ -19,7 +19,9 @@ Loss of contrastive accent
 
 Seóru:
 Loss of glottals
-Palatalization of alveolars
+Palatalization of velars
+- k  ɡ  ɣ  sk  → tɕ dʑ ʑ ɕ / _{+front}
+  kj ɡj ɣj skj → tɕ dʑ ʑ ɕ
 Loss of phonemic velar nasal
 - ŋ → ŋɡ / {V}_{+approximant}?{V}
     → ɡ  / #_
