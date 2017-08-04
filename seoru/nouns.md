@@ -44,7 +44,7 @@ Inanimate
 - lówttwashè -> lóːtwaske
 - mortŋgerhè -> morðgerhe
 - nájslarhè -> nɛ́ːslarhe
-- ŋánjotwashè -> ŋánjotwashe
+- ŋánjotwashè -> ŋánjotwaske
 - ŋohlarhè -> ŋohlarhe
 - phəsʔəhhè -> psʔəkhe
 - pregtwashè -> prektwaske
