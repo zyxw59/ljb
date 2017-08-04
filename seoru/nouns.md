@@ -64,19 +64,18 @@ Vowel stem
 
 Animate
 -------
-- janŋʷos -> jaŋos
+- janŋʷos -> jaŋós
 
 | Sing | Dual | Plural |
 |------|------|--------|
-| -s   | -jə  | -h     |
-| -he  | -jə  | -ːh    |
-| +éː  |      | +éːh   |
-| -rá  | -zá  | -ráh   |
+| -ós  | -ojə | -óh    |
+| -ohe | -ojə | -óːh   |
+| -wéː |      | -wéːh  |
+| -orá | -ozá | -oráh  |
 
 Inanimate
 ---------
 - dlonŋʷohè -> ðloŋohe
-- doldwehè -> ðolðwehe
 - gowŋʷohè -> ɣoːŋohe
 - ksolŋʷohè -> ksolŋohe
 - lajŋʷohè -> lɛːŋohe
@@ -91,10 +90,28 @@ Inanimate
 
 | Sing | Dual | Plural |
 |------|------|--------|
-| -he  | -jə  | -ːh    |
-| -já  | -jɛː | -jáh   |
-| +éː  |      | +éːh   |
-| -rá  | -zá  | -ráh   |
+| -ohe | -ojə | -óːh   |
+| -ojá | -ojɛː| -ojáh  |
+| -wéː |      | -wéːh  |
+| -orá | -ozá | -oráh  |
+
+- doldwehè -> ðolðwehe
+
+| Sing | Dual | Plural |
+|------|------|--------|
+| -ehe | -ejə | -éːh   |
+| -ejá | -ejɛː| -ejáh  |
+| -éː  |      | -éːh   |
+| -erá | -ezá | -eráh  |
+
+- məwhháhè -> mukháhe
+
+| Sing | Dual | Plural |
+|------|------|--------|
+| -ahe | -ajə | -aːh   |
+| -ajá | -ajɛː| -ajáh  |
+| -ɛ́ː  |      | -ɛ́ːh   |
+| -ará | -azá | -aráh  |
 
 - hlowkjəwhè -> hloːkjuhe
 - janjəwhè -> janjuhe
@@ -112,14 +129,5 @@ Inanimate
 | -he  | -jə  | -ːh    |
 | -já  | -jɛː | -jáh   |
 | -ɛ́ː  |      | -ɛ́ːh   |
-| -rá  | -zá  | -ráh   |
-
-- məwhháhè -> mukháhe
-
-| Sing | Dual | Plural |
-|------|------|--------|
-| -he  | -jə  | -ːh    |
-| -já  | -jɛː | -jáh   |
-| +ɛ́ː  |      | +ɛ́ːh   |
 | -rá  | -zá  | -ráh   |
 
