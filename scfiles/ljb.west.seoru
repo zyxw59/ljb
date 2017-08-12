@@ -1,0 +1,102 @@
+V = i e ɛ ə a u o ɔ
+frontV = i e ɛ
+centV = ə a
+backV = u o ɔ
+
+P  = m p  b  ɸ  β
+T  = n t  d  θ  ð
+Tt = n t  d  s  z
+Kj = ɲ tɕ dʑ ɕ  ʑ
+Kk = ŋ k  g  sk ɣ
+K  = ŋ k  g  x  ɣ
+
+R = w r l j
+S = s z
+H = h ɦ ʔ
+N = m n ɲ ŋ
+
+C = {P} {T} {Kj} {K} {R} {S} {H}
+
+// Consonants are easier, so let's do them first
+// unconditional β/w merger
+β > w
+
+// Partial merger of /ŋ/ and /g/. They still contrast intervocalically, and
+// after voiced consonants
+// Word initially, /ŋ/ becomes [g]
+ŋ > g / #_
+// before velars and nasals, and word finally, /g/ becomes [ŋ]
+g > ŋ / {V}_{K}|{N}|#
+
+// Palatalization of velars: ŋ k g sk ɣ > ɲ tɕ dʑ ɕ ʑ
+// before front vowels
+{0:Kk} > {0:Kj} / _ˈ?{frontV}
+// before j (/j/ is lost in this case)
+{0:Kk}j > {0:Kj}
+// before palatals
+{0:Kk} > {0:Kj} / _{Kj}
+
+// Also palatalization of dentals/alveolars, but only before j
+{0:Tt}j > {0:Kj}
+ðj > ʑ
+
+// Spirantization of plossive + h clusters
+plos = p t k
+fric = ɸ θ x
+{0:plos}h > {0:fric}
+
+// Loss of glottals
+{H} > 0
+
+// Now vowels...
+
+// Loss of short unstressed final vowels (this should happen before open/closed
+// things -- I want to lose phonemes, and not immediately rephonemicize them)
+// This should only happen when it wouldn't create an invalid coda -- allow:
+// {C}
+// {N}{C}
+// {R}{C}
+// s{C}
+// {C}s
+{V} > 0 / {V}({N}|{R}|s|){C}_#
+{V} > 0 / {V}{C}s_#
+
+// First, how to define open/closed syllables?
+// An onset can be:
+// {C}
+// {C}{R}
+// {S}{C}
+// {S}{C}{R}
+// 0
+// So, now, insert syllable boundaries
+{0:S}{1:C}{2:R} > %{0:S}{1:C}{2:R} / _ˈ?{V}
+{0:S}{1:C} > %{0:S}{1:C} / _ˈ?{V} ! %{C}*_
+{0:C}{0:C} > {0:C}%{0:C} / _ˈ?{V} ! %{C}*_
+{1:C}{2:R} > %{1:C}{2:R} / _ˈ?{V} ! %{C}*_
+{1:C} > %{1:C} / _ˈ?{V} ! %{C}*_
+0 > % / _#
+0 > % / {V}ː?_ˈ?{V}
+
+// unstressed short vowels:
+// in closed syllables,
+// /i e/ merge to [i], /u o/ merge to [u], /ə a/ merge to [ə]
+usc = i i ɛ ə ə u u ɔ
+{0:V} > {0:usc} / _{C}+% ! ˈ_
+// in open syllables,
+// /e ɛ/ merge to [e], /o ɔ/ merge to [e], /ə a/ merge to [ə]
+uso = i e e ə ə u o o
+{0:V} > {0:uso} / _% ! ˈ_
+
+// unstressed long vowels:
+// in closed syllables,
+// /eː ɛː/ merge to [ɛ], [oː ɔː] merge to [ɔ], and all other vowels shorten
+ulc = i ɛ ɛ ə a u ɔ ɔ
+{0:V}ː > {0:ulc} / _{C}+% ! ˈ_
+
+// in open syllables,
+// /eː ɛː/ merge to [e], [oː ɔː] merge to [o], and all other vowels shorten
+ulo = i e e ə a u o o
+{0:V}ː > {0:ulo} / _% ! ˈ_
+
+// get rid of syllable markers
+% > 0

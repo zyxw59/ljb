@@ -68,13 +68,13 @@ ji > iː ! {V}ː?_
 
 // more accent arithmetic, but i and u can be accented
 V1 = i u e o ɛ a ɔ
-V = {V1} ə
-{0:V1} > ˈ{0:V1} / #({C}*{V}ː?)*{C}*_({C}*ə)*{C}*#
+V2 = {V1} ə
+{0:V1} > ˈ{0:V1} / #({C}*{V2}ː?)*{C}*_({C}*ə)*{C}*#
 
 // loss of hə and ɦə
 // lengthen previous vowel, or disappear if it's already long:
-[hɦ]ə > ː / {V}_
-[hɦ]ə > 0 / {V}ː_
+[hɦ]ə > ː / {V2}_
+[hɦ]ə > 0 / {V2}ː_
 // lost between consonants
 [hɦ]ə > 0 / {C}_{C}
 // lost initially before s
@@ -94,7 +94,7 @@ V = {V1} ə
 // between consonants
 {0:Cw} > {0:Ck} / #|{C}_#|{C}
 // w offglide before vowels
-{0:Cw} > {0:Ck}w / _ˈ?{V}
+{0:Cw} > {0:Ck}w / _ˈ?{V2}
 // labiovelars can't follow unrounded vowels, so we're done!
 
 // at this point, we should define consonants by moa

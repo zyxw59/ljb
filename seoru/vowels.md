@@ -7,3 +7,16 @@
 | ó | óː  | éː  | éː   | ó   | óː  | óː   | ó   | ó  | ó  | éː | ó  |
 | a | aː  | ɛː  | ɛː   | a   | ɔː  | ɔː   | a   | ɔ  | a  | ɛ  | ɔ  |
 | á | áː  | ɛ́ː  | ɛ́ː   | á   | ɔ́ː  | ɔ́ː   | á   | ɔ́  | á  | ɛ́  | ɔ́  |
+
+# Things to note
+- /ɛ ɔ/ always come from /a/
+
+# Goals
+- /ɛ e/ and /ɔ o/ mergers in some places
+- no unstressed long vowels
+- in unstressed closed syllables no /e o/
+- in unstressed open syllables no /ɛ ɔ/
+
+# Changes
+- e o → ɛ ɔ / unstressed closed syllables
+- ɛ ɔ → e o / unstressed open syllables
