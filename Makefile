@@ -15,7 +15,7 @@ TABLES=conjunctions\
        verbal_derivational_endings
 TABDIR=tables
 
-all: grammar.pdf dnar/grammar.pdf
+all: grammar.pdf
 
 grammar.pdf: grammar.tex $(SECTIONS:%=$(SECDIR)/%.tex) $(TABLES:%=$(TABDIR)/%.tex)
 	latexmk -xelatex $<
