@@ -22,9 +22,17 @@ C = {Cp} {Ct} {Ck} {Cw} {Ch} {approx}
 // change to stress accent marking
 {0:Va} > ˈ{0:Vu}
 
+preNasD = mb nd ŋg
+preNasM = ɓ  ɗ  ɠ
+// switch prenasal symbols so they don't syllabify
+{0:preNasD} > {0:preNasM}
+
 // syllabic consonants
 ə{0:sylCons} > {0:vocCons} ! _ˈ?{V}
 {0:sylCons}ə > {0:vocCons} ! {V}_
+
+// switch them back
+{0:preNasM} > {0:preNasD}
 
 // vowel shifts
 // current (late ljb) system:
@@ -54,9 +62,7 @@ e > oː / _{Cw}
 ə > o / _{Cw}
 
 // desyllabification
-// to a consonant after a vowel...
-{0:vocCons1} > {0:sylCons1} / {V}ː?_
-// ...otherwise, ũ becomes um...
+// ũ becomes um...
 ũ > um
 // ...and the rest become a schwa plus consonant:
 {0:vocCons1} > ə{0:sylCons1}
@@ -69,7 +75,15 @@ ji > iː ! {V}ː?_
 // more accent arithmetic, but i and u can be accented
 V1 = i u e o ɛ a ɔ
 V2 = {V1} ə
-{0:V1} > ˈ{0:V1} / #({C}*{V2}ː?)*{C}*_({C}*ə)*{C}*#
+Vg = 0 0 è ò 0 à 0 ə
+// final -ɦà, -wò, -jè, -thèt, -kèʔ, -kèj, -kèht, -hè can't be accented
+a > à / ɦ_#
+o > ò / w_#
+e > è / j|h_#
+e > è / k_(ʔ|j|ht)#
+e > è / th_t#
+{0:V1} > ˈ{0:V1} / #({C}*{V2}ː?)*{C}*_({C}*{Vg})*{C}*#
+{0:Vg} > {0:V2}
 
 // loss of hə and ɦə
 // lengthen previous vowel, or disappear if it's already long:
@@ -82,7 +96,17 @@ V2 = {V1} ə
 // note that hə and ɦə are retained word-initially (except before s), before
 // vowels, and after final consonants
 
-// now for consonants
+// at this point, we should define consonants by moa
+nas    = m  n  ŋ
+preNas = mb nd ŋg
+vdPlos = b  d  g
+vlPlos = p  t  k
+Vric   = β  ð  ɣ
+vdFric = z ɦ
+vlFric = s h
+plos = {preNas} {vdPlos} {vlPlos} ʔ
+fric = {vdFric} {vlFric} {Vric}
+plosFric = {plos} {vdFric} {vlFric}
 
 // delabialization:
 // adjacent to rounded vowels
@@ -97,14 +121,6 @@ V2 = {V1} ə
 {0:Cw} > {0:Ck}w / _ˈ?{V2}
 // labiovelars can't follow unrounded vowels, so we're done!
 
-// at this point, we should define consonants by moa
-nas = m n ŋ
-preNas = mb nd ŋg
-vdPlos = b  d  g
-vlPlos = p  t  k
-vdFric = z ɦ
-vlFric = s h
-
 // nasal assimilation
 // nasals disappear before other nasals
 {nas} > 0 / _{nas}
@@ -112,6 +128,16 @@ vlFric = s h
 {nas} > m / _{Cp}
 {nas} > n / _{Ct}
 {nas} > ŋ / _{Ck}
+
+// deal with merged consonant clusters
+// approximants disappear between consonants (or before initial/after final consonants)
+{approx} > 0 / #|{C}_{C}|#
+// plosives voice after nasals (merging with the prenasals > voiced plosives)
+{nas}{0:vlPlos} > {0:preNas}
+// fricatives voice after nasals
+{0:vlFric} > {0:vdFric} / {nas}_
+// consonants disappear between non-sonorants, or between a non-sonorant and a nasal
+{C} > 0 / {plosFric}_{plosFric}|{nas}
 
 // loss of h and ɦ between consonants
 [hɦ] > 0 / {C}_{C}
@@ -134,8 +160,6 @@ vCons = {vdCons} {vlCons}
 {0:vlCons} > {0:vdCons} / _{vCons}*{vdCons1}
 
 // chain shift: prenasals > voiced plosives > voiced fricatives
-Vric = β  ð  ɣ
-
 {0:vdPlos} > {0:Vric} ! {nas}_
 {0:preNas} > {0:vdPlos}
 
@@ -149,3 +173,11 @@ h > k / s_
 // degemination in clusters and word initially/finally
 {0:C}{0:C} > {0:C} / #|{C}_
 {0:C}{0:C} > {0:C} / _#|{C}
+
+// plosives disappear finally after plosives
+{plos} > 0 / {plos}_#
+// fricatives disappear finally after fricatives
+{fric} > 0 / {fric}_#
+// nasals disappear finally after non-sonorants
+{nas} > 0 / {plosFric}_#
+

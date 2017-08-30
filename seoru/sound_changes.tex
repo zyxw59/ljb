@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{fullpage}
+\usepackage{tabu}
+
+\setmainfont{CMU Serif}
+\newfontface\slfont{CMU Serif Roman Slanted}
+
+\newcommand{\B}[1]{\{#1\}}
+
+\begin{document}
+\section{Proto-ljb}
+\subsection{Onsets}
+\begin{itemize}
+    \item Plosive + fricative
+    \item Plosive + sonorant
+    \item Fricative + sonorant
+\end{itemize}
+
+\subsection{Codas}
+\begin{itemize}
+    \item Sonorant + fricative
+    \item Sonorant + plosive
+    \item Fricative + plosive
+\end{itemize}
+
+\section{Proto-western}
+\subsection{Syllabic consonants}
+Syllabic consonants can't occur adjacent to vowels, and can't be followed by
+a sonorant consonant, so when they desyllabify, they don't change the
+permissible onsets or codas.
+\begin{tabu}{>{*}r@{ $\to$ }>{*}l@{ / }r@{\_}l}
+    ə\B{m,ŋʷ} & u\B N    & \B C & \B{C:$-$sonorant} \\
+    ə\B{n,ŋ}  & ə\B N    & \B C & \B{C:$-$sonorant} \\
+    ə\B{l,r}  & ə\B{l,r} & \B C & \B{C:$-$sonorant} \\
+    \B{m,ŋʷ}ə & u\B N    & \B C & \B{C:$-$sonorant} \\
+    \B{n,ŋ}ə  & ə\B N    & \B C & \B{C:$-$sonorant} \\
+    \B{l,r}ə  & ə\B{l,r} & \B C & \B{C:$-$sonorant} \\
+\end{tabu}
+
+\subsection{*\B{h,ɦ}ə}
+*\B{h,ɦ}ə is lost:
+\begin{itemize}
+    \item After vowels (with compensatory lengthening) -- no change in syllable
+        shape
+    \item Between consonants -- merger of consonant clusters
+    \item Initially before *s -- new clusters
+\end{itemize}
+
+\subsubsection{Consonant cluster mergers}
+In general, consonants disappear between non sonorants, so the maximal cluster
+is two non-sonorants surrounded by two sonorants.
+
+\subsection{Initial *s clusters}
+Initial *s clusters are maximally *s plus a non sonorant plus a sonorant.
+
+\subsection{Final clusters}
+Plosives disappear finally after plosives, and fricatives after fricatives, and
+sonorants after non-sonorants, so final clusters are maximally a sonorant plus
+a fricative a plosive (in either order).
+
+\section{Old Seoru}
+
+\end{document}

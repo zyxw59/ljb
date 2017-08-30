@@ -14,12 +14,13 @@ TABLES=conjunctions\
        secondary_nominal\
        verbal_derivational_endings
 TABDIR=tables
+xelatex=latexmk -xelatex -interaction=nonstopmode
 
 all: grammar.pdf
 
 grammar.pdf: grammar.tex $(SECTIONS:%=$(SECDIR)/%.tex) $(TABLES:%=$(TABDIR)/%.tex)
-	latexmk -xelatex $<
+	${xelatex} $<
 
 %.pdf: %.tex
 	cd $(dir $<) && \
-	latexmk -xelatex $(notdir $<)
+	${xelatex} $(notdir $<)

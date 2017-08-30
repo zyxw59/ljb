@@ -5,10 +5,15 @@ backV = u o ɔ
 
 P  = m p  b  ɸ  β
 T  = n t  d  θ  ð
-Tt = n t  d  s  z
+Tt = n t  d  s  z ð
+Tj = ɲ tɕ dʑ ɕ  ʑ ʑ
 Kj = ɲ tɕ dʑ ɕ  ʑ
 Kk = ŋ k  g  sk ɣ
 K  = ŋ k  g  x  ɣ
+
+// if these included t and d, then tɕ would expand to tɕɕ, which we don't want
+KT  = ŋ k  g  sk ɣ n s z ð
+KTj = ɲ tɕ dʑ ɕ  ʑ ɲ ɕ ʑ ʑ
 
 R = w r l j
 S = s z
@@ -29,21 +34,26 @@ C = {P} {T} {Kj} {K} {R} {S} {H}
 g > ŋ / {V}_{K}|{N}|#
 
 // Palatalization of velars: ŋ k g sk ɣ > ɲ tɕ dʑ ɕ ʑ
-// before front vowels
-{0:Kk} > {0:Kj} / _ˈ?{frontV}
-// before j (/j/ is lost in this case)
+// before front vowels and palatals
+// and of dentals/alveolars before palatals
+// velars and alveolars before /j/ (/j/ is lost in this case)
 {0:Kk}j > {0:Kj}
-// before palatals
-{0:Kk} > {0:Kj} / _{Kj}
+{0:Tt}j > {0:Tj}
+// velars before front vowels
+{0:Kk} > {0:Kj} / _ˈ?{frontV}
+// velars and alveolars before palatals
+{0:KT} > {0:KTj} / _{KT}*{Kj}
 
-// Also palatalization of dentals/alveolars, but only before j
-{0:Tt}j > {0:Kj}
-ðj > ʑ
+// clean up geminate platals
+ɕ > 0 / t_t
+ʑ > 0 / d_d
 
 // Spirantization of plossive + h clusters
-plos = p t k
-fric = ɸ θ x
-{0:plos}h > {0:fric}
+vdPlos = b d g
+vlPlos = p t k
+vdFric = β ð ɣ
+vlFric = ɸ θ x
+{0:vlPlos}h > {0:vlFric}
 
 // Loss of glottals
 {H} > 0
@@ -58,25 +68,29 @@ rl = r l
 // things -- I want to lose phonemes, and not immediately rephonemicize them)
 // This should only happen when it wouldn't create an invalid coda -- allow:
 // {C}
-// {N}{C}
-// {R}{C}
-// s{C}
-// {C}s
-{V} > 0 / {V}({N}|{R}|s|){C}_#
-{V} > 0 / {V}{C}s_#
+// ({N}|{R})?({plos}|{fric})
+// ({N}|{R})?{plos}{fric}
+// ({N}|{R})?{fric}{plos}
+plos = {vdPlos} {vlPlos}
+fric = {vdFric} {vlFric} z ʑ s ɕ
+nonSon = {plos} {fric}
+sonorant = {N} {R}
+{V} > 0 / {V}{C}_#
+{V} > 0 / {V}{sonorant}?{nonSon}_#
+{V} > 0 / {V}{sonorant}?{plos}{fric}_#
+{V} > 0 / {V}{sonorant}?{fric}{plos}_#
 
 // First, how to define open/closed syllables?
 // An onset can be:
 // {C}
-// {C}{R}
+// {nonSon}{sonorant}
 // {S}{C}
-// {S}{C}{R}
+// {S}{nonSon}{R}
 // 0
 // So, now, insert syllable boundaries
-{0:S}{1:C}{2:R} > %{0:S}{1:C}{2:R} / _ˈ?{V}
+{0:S}{1:nonSon}{2:R} > %{0:S}{1:nonSon}{2:R} / _ˈ?{V}
 {0:S}{1:C} > %{0:S}{1:C} / _ˈ?{V} ! %{C}*_
-{0:C}{0:C} > {0:C}%{0:C} / _ˈ?{V} ! %{C}*_
-{1:C}{2:R} > %{1:C}{2:R} / _ˈ?{V} ! %{C}*_
+{1:nonSon}{2:sonorant} > %{1:nonSon}{2:sonorant} / _ˈ?{V} ! %{C}*_
 {1:C} > %{1:C} / _ˈ?{V} ! %{C}*_
 0 > % / _#
 0 > % / {V}ː?_ˈ?{V}
