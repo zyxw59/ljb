@@ -1,0 +1,20 @@
+{{with RuleList `V = a e o ə á é ó à è ò` .}}{{end -}}
+
+{{block "table" . -}}
+{{if Match . "{V} >  / _#" -}}
+{{.}}s	{{.}}jə	{{.}}h
+{{- else -}}
+{{.}}əs	{{.}}jə	{{.}}əh
+{{- end}}
+{{.}}hè	{{.}}jə	{{.}}həh
+{{.}}ja	{{.}}jaj	{{.}}jah
+{{if Match . "{V} >  / _#" -}}
+{{.}}j	{{.}}za	{{.}}jh
+{{- else -}}
+{{.}}aj	{{.}}za	{{.}}ajh
+{{- end}}
+{{.}}ra	{{.}}raj	{{.}}rah
+{{- end}}
+
+{{ApplyPairs (Execute "table" .) "" ".ljb.west.seoru"}}
+
