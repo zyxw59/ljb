@@ -25,6 +25,11 @@ C = {P} {T} {Kj} {K} {R} {S} {H}
 // Consonants are easier, so let's do them first
 // unconditional β/w merger
 β > w
+// loss of /ɣ/ -- it becomes /g/ initially and when geminate, and disappears
+// elsewhere
+ɣ > g / #_
+ɣɣ > g
+ɣ > 0
 
 // Partial merger of /ŋ/ and /g/. They still contrast intervocalically, and
 // after voiced consonants
@@ -63,6 +68,22 @@ rl = r l
 {rl} > {0:rl} / _{0:rl}
 
 // Now vowels...
+// Vowels in hiatus:
+// both unstressed or first one stressed: second one becomes a glide or
+// lengthens preceding vowel (or disappears if it's already long)
+{frontV} > ː / {frontV}_ ! _ː
+{frontV} > 0 / {frontV}ː_ ! _ː
+{backV} > ː / {backV}_ ! _ː
+{backV} > 0 / {backV}ː_ ! _ː
+{frontV} > j / {V}ː?_ ! _ː
+{centV} > ː / {V}_ ! _ː
+{centV} > 0 / {V}ː_ ! _ː
+{backV} > w / {V}ː?_ ! _ː
+// second one stressed: first one becomes a glide (except central vowels, which
+// disappear)
+{frontV} > j / _ˈ{V}
+{backV} > w / _ˈ{V}
+{centV} > 0 / _ˈ{V}
 
 // Loss of short unstressed final vowels (this should happen before open/closed
 // things -- I want to lose phonemes, and not immediately rephonemicize them)
@@ -75,10 +96,11 @@ plos = {vdPlos} {vlPlos}
 fric = {vdFric} {vlFric} z ʑ s ɕ
 nonSon = {plos} {fric}
 sonorant = {N} {R}
-{V} > 0 / {V}{C}_#
-{V} > 0 / {V}{sonorant}?{nonSon}_#
-{V} > 0 / {V}{sonorant}?{plos}{fric}_#
-{V} > 0 / {V}{sonorant}?{fric}{plos}_#
+{V} > 0 / {V}ː?_#
+{V} > 0 / {V}ː?{C}_#
+{V} > 0 / {V}ː?{sonorant}?{nonSon}_#
+{V} > 0 / {V}ː?{sonorant}?{plos}{fric}_#
+{V} > 0 / {V}ː?{sonorant}?{fric}{plos}_#
 
 // First, how to define open/closed syllables?
 // An onset can be:
@@ -137,3 +159,7 @@ ulo = i e e ə ə u o o
 
 // get rid of syllable markers
 % > 0
+
+// get rid of geminate glides
+j > 0 / j_
+w > 0 / w_

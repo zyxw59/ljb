@@ -27,6 +27,10 @@ preNasM = ɓ  ɗ  ɠ
 // switch prenasal symbols so they don't syllabify
 {0:preNasD} > {0:preNasM}
 
+// geminate j and w become singleton
+j > 0 / j_
+w > 0 / w_
+
 // syllabic consonants
 ə{0:sylCons} > {0:vocCons} ! _ˈ?{V}
 {0:sylCons}ə > {0:vocCons} ! {V}_
