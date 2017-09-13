@@ -1,6 +1,6 @@
 Notes
 -----
-- Unstressed _-éa_ becomes _-e_
+- Unstressed long vowels shorten
 - Unstressed _-á_ disappears after a vowel + a single consonant (including
   _sj_)
 - _z_ becomes _s_ after _s_
@@ -21,37 +21,37 @@ Animate
 |------------|----------|--------|
 | Nominative | -as      | -0     |
 | Accusative | -cj      | -c     |
-| Genitive   | -éa      | -zá    |
-| Locative   | -rá      | -réa   |
+| Genitive   | -ê       | -zá    |
+| Locative   | -rá      | -rê    |
 
-- néassajas "Life" < nájssəjəs
+- nêssajas "Life" < nájssəjəs
 
 |            | Singular | Plural |
 |------------|----------|--------|
 | Nominative | -ajas    | -aj    |
 | Accusative | -i       | -aj    |
-| Genitive   | -ajéa    | -izá   |
-| Locative   | -irá     | -iréa  |
+| Genitive   | -ajê     | -izá   |
+| Locative   | -irá     | -irê   |
 
-- mómliðas "infant" < mámləjd
+- mómliðas "infant" < mámləjdəs
 
 |            | Singular | Plural |
 |------------|----------|--------|
 | Nominative | -as      | -0     |
 | Accusative | -h       | -h     |
-| Genitive   | -éa      | -zá    |
-| Locative   | -rá      | -réa   |
+| Genitive   | -ê       | -zá    |
+| Locative   | -rá      | -rê    |
 
-- jesáws "sun" < jejzʔohəs
-- toláws "cook" < tolʔohəs
-- tseáws "wolf" < tsojʔohəs
+- jesōs "sun" < jejzʔohəs
+- tolōs "cook" < tolʔohəs
+- tseōs "wolf" < tsojʔohəs
 
 |            | Singular | Plural |
 |------------|----------|--------|
-| Nominative | -áws     | -áw    |
+| Nominative | -ōs      | -ō     |
 | Accusative | -óch     | -ój    |
-| Genitive   | -wéa     | -ozá   |
-| Locative   | -orá     | -oréa  |
+| Genitive   | -wê      | -ozá   |
+| Locative   | -orá     | -orê   |
 
 - álos "god" < ʔálʔohəs
 
@@ -66,10 +66,10 @@ Animate
 
 |            | Singular | Plural |
 |------------|----------|--------|
-| Nominative | maws     | maw    |
+| Nominative | mūs      | mū     |
 | Accusative | much     | mwi    |
-| Genitive   | mwea     | muzá   |
-| Locative   | murá     | muréa  |
+| Genitive   | mwê      | muzá   |
+| Locative   | murá     | murê   |
 
 Inanimate
 ---------
@@ -86,32 +86,32 @@ Inanimate
 
 |            | Singular | Plural |
 |------------|----------|--------|
-| Nominative | -ojá     | -ojéa  |
-| Accusative | -ój      | -áw    |
-| Genitive   | -wáj     | -ozá   |
-| Locative   | -orá     | -oréa  |
+| Nominative | -ojá     | -ojê   |
+| Accusative | -ój      | -ō     |
+| Genitive   | -wē      | -ozá   |
+| Locative   | -orá     | -orê   |
 
 - ðulðwejá "bowl" < doldweja
 
 |            | Singular | Plural |
 |------------|----------|--------|
-| Nominative | -ejá     | -ejéa  |
-| Accusative | -áj      | -áj    |
-| Genitive   | -áj      | -ezá   |
-| Locative   | -erá     | -eréa  |
+| Nominative | -ejá     | -ejê   |
+| Accusative | -ē       | -ē     |
+| Genitive   | -ē       | -ezá   |
+| Locative   | -erá     | -erê   |
 
 - golarwáj "port, harbor" < ŋohlarwája
 - mumáj "nation, homeland" < məwhmája
 
 |            | Singular | Plural |
 |------------|----------|--------|
-| Nominative | -ajá     | -ajéa  |
+| Nominative | -ajá     | -ajê   |
 | Accusative | -áj      | -ā     |
-| Genitive   | -éa      | -azá   |
-| Locative   | -ará     | -aréa  |
+| Genitive   | -ê       | -azá   |
+| Locative   | -ará     | -arê   |
 
 - cézjuj "metal" < kézjəwja
-- locjujá "cow" < hlowkjəwja (Accusative _láwcj-_)
+- locjujá "cow" < hlowkjəwja (Accusative _lōcj-_)
 - janjujá "light" < janjəwja
 - pláŋuj "feather" < pláhŋʷoja
 - ráŋuj "cloth, clothing" < ráhŋʷoja
@@ -119,79 +119,79 @@ Inanimate
 
 |            | Singular | Plural |
 |------------|----------|--------|
-| Nominative | -ujá     | -ujéa  |
+| Nominative | -ujá     | -ujê   |
 | Accusative | -uj      | -u     |
-| Genitive   | -wéa     | -uzá   |
-| Locative   | -urá     | -uréa  |
+| Genitive   | -wê      | -uzá   |
+| Locative   | -urá     | -urê   |
 
-- cwásaj "rain" < káwsəja
+- côsaj "rain" < káwsəja
 - cojosajá "pain" < kʷojosəja
 - ðneksajá "illness" < tneksəja
-- lwásaj "night" < láwsəja
-- néasjosaj "death" < nájsjosəja
-- néassaj "life" < nájssəj
-- pokjosajá "peace" < pekʷjosəja
+- lôsaj "night" < láwsəja
+- nêsjosaj "death" < nájsjosəja
+- nêssaj "life" < nájssəj
+- pocjosajá "peace" < pekʷjosəja
 
 |            | Singular | Plural |
 |------------|----------|--------|
-| Nominative | -ajá     | -ajéa  |
+| Nominative | -ajá     | -ajê   |
 | Accusative | -i       | -aj    |
-| Genitive   | -ajéa    | -izá   |
-| Locative   | -irá     | -iréa  |
+| Genitive   | -ajê     | -izá   |
+| Locative   | -irá     | -irê   |
 
 - clegój "job, work" < kʷlekgója
 
 |            | Singular | Plural |
 |------------|----------|--------|
 | Nominative | -ojá     | -óje   |
-| Accusative | -íj      | -ój    |
-| Genitive   | -ojéa    | -íjz   |
-| Locative   | -íjr     | -íjre  |
+| Accusative | -ē       | -ój    |
+| Genitive   | -ojê     | -ēz    |
+| Locative   | -ēr      | -ēre   |
 
 - cálpaj "necessity" < kálpʔəhja
-- ðmíj "food" < dméʔəhja
+- ðmēj "food" < dméʔəhja
 - muctajá "people" < məwhtəhja
 - phésaj "skin" < phəsʔəhja
 
 |            | Singular | Plural |
 |------------|----------|--------|
-| Nominative | -já      | -jéa   |
+| Nominative | -já      | -jê    |
 | Accusative | -ch      | -ch    |
-| Genitive   | -éa      | -zá    |
-| Locative   | -rá      | -réa   |
+| Genitive   | -ê       | -zá    |
+| Locative   | -rá      | -rê    |
 
 - csaliðjá "sand" < ksələjdja
 - gánliðj "fruit" < ŋánləjdja
-- jescucjá "morning" < jejzhwəkja (Accusative _jájscuch_)
-- locliðjá "milk" < hlowkləjdja (Accusative _láwclith_)
-- otliðjá "broth" < howtləjd (Accusative _áwtlith_)
+- jescucjá "morning" < jejzhwəkja (Accusative _jēscuch_)
+- locliðjá "milk" < hlowkləjdja (Accusative _lōclith_)
+- otliðjá "broth" < howtləjd (Accusative _ōtlith_)
 - stliðjá "table" < həstləjd
 
 |            | Singular | Plural |
 |------------|----------|--------|
-| Nominative | -já      | -jéa   |
+| Nominative | -já      | -jê    |
 | Accusative | -h       | -h     |
-| Genitive   | -éa      | -zá    |
-| Locative   | -rá      | -réa   |
+| Genitive   | -ê       | -zá    |
+| Locative   | -rá      | -rê    |
 
 - dwəlajá "tree" < ndwəlʔəhja
 
 |            | Singular | Plural |
 |------------|----------|--------|
-| Nominative | -ajá     | -ajéa  |
+| Nominative | -ajá     | -ajê   |
 | Accusative | -ách     | -ách   |
-| Genitive   | -éa      | -azá   |
-| Locative   | -ará     | -aréa  |
+| Genitive   | -ê       | -azá   |
+| Locative   | -ará     | -arê   |
 
 - altwasjá "wheat" < halhtwasja
 - artwasjá "sky" < hartwasja
 - dnátwasj "plant" < ndnátwasja
 - gastwasjá "rock" < gazdtwasja
 - golarjá "house, shelter" < ŋohlarja
-- láwtwasj "earth" < lówtwasja
+- lōtwasj "earth" < lówtwasja
 - lumlarjá "mountain" < lomlarja
 - murðgerjá "time" < mortŋgerja
-- néaslarja "home" < nájslarja
+- nêslarja "home" < nájslarja
 - priktwasjá "stick" < pregtwasja
 - psetwasjá "river" < psettwasja
 - talgerjá "fire" < təlŋgerja
@@ -201,8 +201,8 @@ Inanimate
 
 |            | Singular | Plural |
 |------------|----------|--------|
-| Nominative | -já      | -jéa   |
+| Nominative | -já      | -jê    |
 | Accusative | -cj      | -c     |
-| Genitive   | -éa      | -za    |
-| Locative   | -rá      | -réa   |
+| Genitive   | -ê       | -za    |
+| Locative   | -rá      | -rê    |
 

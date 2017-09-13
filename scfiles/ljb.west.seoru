@@ -117,39 +117,22 @@ sonorant = {N} {R}
 0 > % / _#
 0 > % / {V}ː?_ˈ?{V}
 
-// stressed vowels
-// stressed long vowels:
-// a series of changes occur:
-// first, vowel breaking
-eː > ej / ˈ_
-ɛː > ea / ˈ_
-oː > ow / ˈ_
-ɔː > oa / ˈ_
-// then, some shifts:
-ej > iː
-ow > aw
-ˈoa > wˈa
-// and more breaking
-iː > aj / ˈ_
-uː > aw / ˈ_
-// at this point, the only remaining stressed long monophthong is /ˈaː/ < *ahə
-
-// stressed short vowels mostly stay the same
+// stressed vowels mostly stay the same
 
 // unstressed short vowels:
 // in closed syllables,
-// /i e/ merge to [i], /u o/ merge to [u], /ə a/ merge to [a]
-usc = i i ɛ a a u u ɔ
+// /i e/ merge to [i], /u o/ merge to [u], /ə a/ merge to [ə]
+usc = i i ɛ ə ə u u ɔ
 {0:V} > {0:usc} / _{C}+% ! ˈ_
 // in open syllables,
-// /e ɛ/ merge to [e], /o ɔ/ merge to [e], /ə a/ merge to [ə]
+// /e ɛ/ merge to [e], /o ɔ/ merge to [o], /ə a/ merge to [ə]
 uso = i e e ə ə u o o
 {0:V} > {0:uso} / _% ! ˈ_
 
 // unstressed long vowels:
 // in closed syllables,
-// /eː ɛː/ merge to [ɛ], [oː ɔː] merge to [ɔ], /əː aː/ merge to [a], and all other vowels shorten
-ulc = i ɛ ɛ a a u ɔ ɔ
+// /eː ɛː/ merge to [ɛ], [oː ɔː] merge to [ɔ], /əː aː/ merge to [ə], and all other vowels shorten
+ulc = i ɛ ɛ ə ə u ɔ ɔ
 {0:V}ː > {0:ulc} / _{C}+% ! ˈ_
 
 // in open syllables,
