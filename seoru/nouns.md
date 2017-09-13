@@ -62,7 +62,7 @@ Animate
 | Genitive   | -oe      | -uz    |
 | Locative   | -ur      | -ore   |
 
-- maws "man, human" < məwhəs
+- mūs "man, human" < məwhəs
 
 |            | Singular | Plural |
 |------------|----------|--------|
