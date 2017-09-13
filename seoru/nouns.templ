@@ -2,18 +2,18 @@
 
 {{block "table" . -}}
 {{if Match . "{V} >  / _#" -}}
-{{.}}s	{{.}}jə	{{.}}h
+{{.}}s	{{.}}jə	{{.}}h	{{.}}təhja
 {{- else -}}
-{{.}}əs	{{.}}jə	{{.}}əh
+{{.}}əs	{{.}}jə	{{.}}əh	{{.}}təhja
 {{- end}}
-{{.}}hè	{{.}}jə	{{.}}həh
-{{.}}ja	{{.}}jaj	{{.}}jah
+{{.}}ja	{{.}}jaj	{{.}}jah	{{.}}təhja
+{{.}}hè	{{.}}jə	{{.}}həh	{{.}}təhhè
 {{if Match . "{V} >  / _#" -}}
-{{.}}j	{{.}}za	{{.}}jh
+{{.}}j	{{.}}za	{{.}}jh	{{.}}təhaj
 {{- else -}}
-{{.}}aj	{{.}}za	{{.}}ajh
+{{.}}aj	{{.}}za	{{.}}ajh	{{.}}təhaj
 {{- end}}
-{{.}}ra	{{.}}raj	{{.}}rah
+{{.}}ra	{{.}}raj	{{.}}rah	{{.}}təhra
 {{- end}}
 
 {{ApplyPairs (Execute "table" .) "" ".ljb.west.seoru"}}
