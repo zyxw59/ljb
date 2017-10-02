@@ -2,7 +2,7 @@ V  = a e o ə
 Va = á é ó
 cV = m n ŋ ŋʷ r l j w
 vV = ũ ə̃ ə̃ ũ  r̩ l̩ i u
-VV = {V} {vV} õ
+VV = {V} {vV}
 
 P = p  b  mb  m
 T = t  d  nd  n
@@ -22,18 +22,12 @@ Nt = p  t  k  b d g
 {0:Va} > ˈ{0:V}
 
 // syllabic consonants
-ə{0:cV} > {0:vV} ! _ˈ?{V}
-{0:cV}ə > {0:vV} ! {V}_̃
-{0:cV}ˈə > ˈ{0:vV} ! {V}_̃
+ə{0:cV} > {0:vV} ! _ˈ?{VV}
+{0:cV}ə > {0:vV} ! {VV}_
+{0:cV}ˈə > ˈ{0:vV} ! {VV}_
 
-// õ
-oŋʷ > ow̃ / _ˈ{V}
-oŋʷ > õ
-
-// labiovelars become plain labials
+// labiovelars (except ŋʷ) become plain labials
 {0:W} > {0:P}
-// implosives become prenasals
-{0:B} > {0:M}
 // consonants (except liquids) disappear before prenasals
 {CC} > 0 / _{M}
 // glottals disappear between consonants or before initial consonants or after
