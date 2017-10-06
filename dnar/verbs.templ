@@ -1,0 +1,17 @@
+{{with RuleList `V = a e o ə á é ó à è ò` .}}{{end -}}
+
+{{block "table" . -}}
+{{.}}ɦà	{{.}}ɦə	{{.}}heɦ
+{{.}}wò	{{.}}wən	{{.}}hon
+{{.}}jè	{{.}}jə	{{.}}hej
+{{.}}thèt	{{.}}thət	{{.}}het
+{{.}}san	{{.}}sən	{{.}}hens
+{{.}}sajs	{{.}}səjs	{{.}}hejs
+{{.}}saht	{{.}}səht	{{.}}hes
+{{.}}kèʔ	{{.}}kəʔ	{{.}}hek
+{{.}}kèj	{{.}}kəj	{{.}}hekèj
+{{.}}kèht	{{.}}kəht	{{.}}hek
+{{- end}}
+
+{{ApplyPairs (Execute "table" .) "" ".ljb.east.dnar"}}
+

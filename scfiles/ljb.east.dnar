@@ -1,0 +1,128 @@
+V = a e o ə i u ĩ ũ ṅ ṙ ḷ
+
+P = p b f v mb m mm
+T = t d θ ð nd n nn
+K = k g x ɣ ŋg ŋ ŋŋ
+H = ʔ h ɦ
+S = 0 s z
+R = r l j w w̃
+C = {P} {T} {K} {H} {S} {R}
+// CC is consonants except for approximants
+CC = {P} {T} {K} {H} {S}
+
+nas    = m  n  ŋ  0
+nasNas = mm nn ŋŋ 0
+vlPlos =  p  t  k ʔ
+vdPlos =  b  d  g 0
+preNas = mb nd ŋg 0
+plos = {vlPlos} {vdPlos} {preNas}
+vlFric =  f  θ  x h
+vdFric =  v  ð  ɣ ɦ
+
+son = {nas} {R}
+
+fric = s z h ɦ
+zFric = z z ɦ ɦ
+
+obst     = {preNas} {vlPlos} {vdPlos} {fric}
+obstFric = {preNas} {vlFric} {vdFric} {fric}
+obstNas  = {nasNas} {nasNas} {nasNas} {zFric}
+
+// Cluster simplification
+// We want to get rid of most clusters, except those crossing syllable
+// boundaries. Geminate nasals and prenasalized stops are considered single
+// consonants, and coda approximant are considered diphthongs
+// First, insert syllable boundaries:
+// onset plos
+0 > % / _{vlPlos}ˈ?{V} ! %{C}*_
+0 > % / _{preNas}ˈ?{V} ! %{C}*_
+0 > % / _{vdPlos}ˈ?{V} ! %{C}*_
+// onset vlplos + vlfric
+0 > % / _{vlPlos}[sh]ˈ?{V} ! %{C}*_
+// onset preNas + vdfric
+0 > % / _{preNas}[zɦ]ˈ?{V} ! %{C}*_
+// onset vdplos + vdfric
+0 > % / _{vdPlos}[zɦ]ˈ?{V} ! %{C}*_
+// onset preNas + son
+0 > % / _{preNas}{son}ˈ?{V} ! %{C}*_
+// onset plos + son
+0 > % / _{plos}{son}ˈ?{V} ! %{C}*_
+// onset fric
+0 > % / _{fric}ˈ?{V} ! %{C}*_
+// onset fric + son
+0 > % / _{fric}{son}ˈ?{V} ! %{C}*_
+// onset son
+0 > % / _{son}ˈ?{V} ! %{C}*_
+// word finally
+0 > % / _#
+
+{0:obst}{fric} > {0:obstFric} / %_
+{0:obst}{nas} > {0:obstNas} / %_
+{fric}{0:obst} > {0:obstFric} / _%
+{nas}{0:obst} > {0:obstNas} / _%
+
+// r–l merger in codas
+ḷ > ṙ
+l > r / {V}_
+
+// onset approximant clusters metathesize with following vowel if there isn't
+// already a diphthong, and the vowel isn't originally a syllabic consonant
+Vfull = a e o ə
+{0:R}{1:Vfull} > {1:Vfull}{0:R} / {C}_ ! _{R}
+{0:R}ˈ{1:Vfull} > ˈ{1:Vfull}{0:R} / {C}_ ! _{R}
+// otherwise, the approximant is lost
+{R} > 0 / {C}_ˈ?{V}
+
+// loss of unstressed final vowels
+{0:V} > 0 / _%# ! ˈ_
+
+// epenthetic schwa in final consonant clusters
+{0:C}%{1:C}% > %{0:C}ə{1:C}% / _#
+
+% > 0 / _{C}%
+
+// Now some vowels...
+Vv = a  e  o  ə i u ṙ
+
+// monophthongization
+Vn = õ  ṅ  õ  ṅ i u ṙ
+Vj = eː eː ə  i i u ṙ
+Vw = oː ə  uː u i u ṙ
+Vr = aː eː oː ṙ i u ṙ
+{0:Vv}w̃ > {0:Vn}
+{0:Vv}j > {0:Vj}
+{0:Vv}w > {0:Vw}
+{0:Vv}r > {0:Vr}
+
+// denasalization
+õ > oː
+ũ > uː
+ṅ > ə
+w̃ > w
+
+// i-, u-, and a-affectation
+ii = i iː
+uu = u uː
+aa = a aː
+Vi = e  i  e  i i i ṙ
+Vu = o  ə  u  o u u ṙ
+Va = a  a  a  a e o ṙ
+{0:Vv} > {0:Vi} / _ː?{C}?%({C}ˈ?{V}ː?{C}?%)*{C}{ii}{C}?%#
+{0:Vv} > {0:Vu} / _ː?{C}?%({C}ˈ?{V}ː?{C}?%)*{C}{uu}{C}?%#
+{0:Vv} > {0:Va} / _ː?{C}?%({C}ˈ?{V}ː?{C}?%)*{C}{aa}{C}?%#
+
+// unstressed vowels and vowels in closed syllables shorten
+{0:V}ː > {0:V} / {C}_
+{0:V}ː > {0:V} / _{C}
+// stressed vowels in long syllables lengthen
+{0:V} > {0:V}ː / ˈ_%
+
+// Vowel reduction
+// CV.CVC. > CCVC.
+{V}% > 0 / {C}_{C}ˈ?{V}{C}%
+// CV.CV. > CVC.
+%{0:C}{V}% > {0:C}% / {C}ˈ?{V}_
+// CV.CˈV > CCˈV
+{V}% > 0 / {C}_{C}ˈ{V}
+// CV.CCV > CVC.CV
+%{0:C} > {0:C}% / {V}ː?_{C}
