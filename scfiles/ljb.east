@@ -1,5 +1,5 @@
 V  = a e o ə
-Va = á é ó
+Va = á é ó ə́
 cV = m n ŋ ŋʷ r l j w
 vV = ũ ṅ ṅ ũ  ṙ ḷ i u
 VV = {V} {vV}
@@ -17,6 +17,12 @@ CC = {P} {T} {K} {W} {H} {S}
 M  = mb nd ŋg
 N  = m  n  ŋ  m n ŋ
 Nt = p  t  k  b d g
+
+// accent shifts to always penult
+// get rid of acute
+{0:Va} > {0:V}
+// penult
+{0:V} > {0:Va} / _{C}+{V}{C}*#
 
 // change to stress accent marking
 {0:Va} > ˈ{0:V}
