@@ -44,6 +44,14 @@ obstNas  = {nasNas} {nasNas} {zFric} {vdFric}
 {0:obst}{sFric} > {0:obstFric} / {obst}|{nas}|#_
 {0:obst}{nas} > {0:obstNas} / {obst}|{nas}|#_
 
+// onset approximant clusters metathesize with following vowel if there isn't
+// already a diphthong, and the vowel isn't originally a syllabic consonant
+Vfull = a e o ə
+{0:R}{1:Vfull} > {1:Vfull}{0:R} / {C}_ ! _{R}
+{0:R}ˈ{1:Vfull} > ˈ{1:Vfull}{0:R} / {C}_ ! _{R}
+// otherwise, the approximant is lost
+{R} > 0 / {C}_ˈ?{V}
+
 // Now insert syllable boundaries
 // onset obst
 0 > % / _{obst}ˈ?{V} ! %{C}*_
@@ -57,14 +65,6 @@ obstNas  = {nasNas} {nasNas} {zFric} {vdFric}
 0 > % / #_ˈ?{V}
 // word finally
 0 > % / _#
-
-// onset approximant clusters metathesize with following vowel if there isn't
-// already a diphthong, and the vowel isn't originally a syllabic consonant
-Vfull = a e o ə
-{0:R}{1:Vfull} > {1:Vfull}{0:R} / {C}_ ! _{R}
-{0:R}ˈ{1:Vfull} > ˈ{1:Vfull}{0:R} / {C}_ ! _{R}
-// otherwise, the approximant is lost
-{R} > 0 / {C}_ˈ?{V}
 
 // r–l merger in codas
 ḷ > ṙ
@@ -118,3 +118,6 @@ Va = a a a a e o ṙ
 {V}% > 0 / {C}_{C}ˈ{V}
 // CV.CCV > CVC.CV
 %{0:C} > {0:C}% / {V}_{C}
+
+// get rid of syllable markers
+% > 0

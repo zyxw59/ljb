@@ -13,8 +13,23 @@ nendhemb < nandhemb `to be slow'
 -a--a-ək  -a--e-hek
 -a--a-kəh -a--a-hakəh
 
+pehpet < plohbet `to spill'
+pezhemb < pwámshemb
+
+-e--e-    -a--a-əh
+-u--ə-us  -a--a-həs
+-e--i-ʔes -e--i-hiʔes
+-a--a-θəh -a--a-hathəh
+-a--a-saz -a--a-hasaz
+-o--e-z   -a--a-hasən
+-a--a-səh -a--a-hasəh
+-a--a-kəs -a--a-hakəs
+-a--a-ək  -o--e-hek
+-a--a-kəh -a--a-hakəh
+
 hippet < hajbbet `to wait for'
 kithemb < kjethemb `to disagree'
+pispet < prajsbet `to differentiate oneself'
 
 -i--e-    -a--a-əh
 -ə--ə-us  -a--a-həs
@@ -27,30 +42,31 @@ kithemb < kjethemb `to disagree'
 -a--a-ək  -e--e-hek
 -a--a-kəh -a--a-hakəh
 
-ter(j) < doljo `to be fifth'
+tal < doljo `to be fifth'
+ŋah < ŋohjo `to hide'
 
--er       --oh
--u-us     --ahəs
---eʔes    -e-hiʔes
---athəh   -a-hathəh
---asaz    -a-hasaz
---asən    -a-hasən
---asəh    -a-hasəh
---akəs    -a-hakəs
---ok      -o-hek
---akəh    -a-hakəh
+-a-      --ajəh
+-u-us    --ahəs
+--iʔes   -e-hiʔes
+--athəh  -a-hathəh
+--asaz   -a-hasaz
+--asən   -a-hasən
+--asəh   -a-hasəh
+--akəs   -a-hakəs
+--ajək   -o-hek
+--akəh   -a-hakəh
 
-ler(j) < lárjo `to be at a location'
+lar < lárjo `to be at a location'
 
--er     --oh
+-a-     --ajəh
 -o-us   --ahəs
---eʔes  -e-hiʔes
+--iʔes  -e-hiʔes
 --athəh -a-hathəh
 --asaz  -a-hasaz
 --asən  -a-hasən
 --asəh  -a-hasəh
 --akəs  -a-hakəs
---ok    -a-hek
+--ajək  -a-hek
 --akəh  -a-hakəh
 
 nneteh < ndnádeh `(of a plant) to grow'
@@ -120,3 +136,15 @@ nishisteh < nájshəsdeh `to die'
 -a--a--a-ək   -e--ə--e-hek
 -a--a--a-kəh  -a--a--a-hakəh
 
+pethisteh < pathəsdéh `to stand up'
+
+-e--i--e-     -a--a--a-əh
+-o--o--ə-us   -a--a--a-həs
+-e--i--i-ʔes  -e--i--i-hiʔes
+-a--a--a-thəh -a--a--a-hathəh
+-a--a--a-saz  -a--a--a-hasaz
+-a--a--a-sən  -a--a--a-hasən
+-a--a--a-səh  -a--a--a-hasəh
+-a--a--a-kəs  -a--a--a-hakəs
+-a--a--a-ək   -a--ə--e-hek
+-a--a--a-kəh  -a--a--a-hakəh
