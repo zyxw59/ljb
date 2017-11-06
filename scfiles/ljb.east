@@ -65,3 +65,4 @@ Vo = o ə o ə
 // nasals assimilate to a preceding stop
 {N} > {0:N} / {0:Nt}_
 
+ˈ{0:V} > {0:Vs}
