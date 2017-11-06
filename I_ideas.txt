@@ -36,3 +36,9 @@ Orthography:
 /i e ɛ/ → ‹i›
 /u o ɔ/ → ‹u›
 /ə a/ → ‹a› ← ‹h›
+
+Gender idea:
+-ʔoh "agent of necessity" becomes a feminine marker, while -ŋger "agent"
+becomes a masculine marker, leading to an analogical third person feminine
+pronoun *koh-
+Maybe -ŋʷo nouns also get lumped in
