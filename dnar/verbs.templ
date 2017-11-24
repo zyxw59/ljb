@@ -1,21 +1,40 @@
 {{with RuleList `V = a e o ə á é ó à è ò` .}}{{end -}}
 
-{{define "table" -}}
-{{.}}	{{.}}he
+{{define "personal" -}}
+{{.}}ɦàs
 {{if Match . "{V} >  / _#" -}}
-{{.}}ws	{{.}}hews
+{{.}}ws	{{.}}ʔès	{{.}}thəh
 {{- else -}}
-{{.}}wəs	{{.}}hews
+{{.}}wəs	{{.}}ʔès	{{.}}thəh
 {{- end}}
-{{.}}ʔès	{{.}}heʔès
-{{.}}thəh	{{.}}hethəh
-{{.}}sàns	{{.}}hesàns
-{{.}}snəj	{{.}}hesnəj
-{{.}}səh	{{.}}hesəh
-{{.}}kəs	{{.}}hekəs
-{{.}}kjə	{{.}}hekjə
-{{.}}kəh	{{.}}hekəh
+{{.}}sàns	{{.}}snəj	{{.}}səh
+{{.}}kəs	{{.}}kjə	{{.}}kəh
 {{- end -}}
 
-{{ApplyPairs (Execute "table" .) "" ".ljb.east.dnar"}}
+{{define "present" -}}
+{{.}}
+{{- end -}}
 
+{{define "preterite_a" -}}
+{{.}}dəl
+{{- end -}}
+
+{{define "preterite_b" -}}
+{{.}}bet
+{{- end -}}
+
+{{define "imperfect" -}}
+{{.}}he
+{{- end -}}
+
+{{define "table" -}}
+{{Execute "personal" (Execute "present" .)}}
+
+{{Execute "personal" (Execute "preterite_a" .)}}
+
+{{Execute "personal" (Execute "preterite_b" .)}}
+
+{{Execute "personal" (Execute "imperfect" .)}}
+{{end -}}
+
+{{ApplyPairs (Execute "table" .) "" ".ljb.east.dnar"}}

@@ -41,7 +41,6 @@ Vo = o ə o ə
 // syllabic consonants
 ə{0:cV} > {0:vV} ! _ˈ?{VV}
 {0:cV}ə > {0:vV} ! {VV}_
-{0:cV}ˈə > ˈ{0:vV} ! {VV}_
 
 // labiovelars (except ŋʷ) become plain labials
 {0:W} > {0:P}
