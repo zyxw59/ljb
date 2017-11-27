@@ -1,122 +1,64 @@
-V = a e o ə ũ ṅ ṙ ḷ i u
+Vv = a e o ũ ṅ ṙ ḷ i u
+V = {Vv} ə
+Vsyl = ũ ṅ ṙ ḷ i u
+Vcon = w n r l j w
 
-P = p b mb m mm f v
-T = t d nd n nn θ ð
-K = k g ŋg ŋ ŋŋ x ɣ
+P = p ɸ b mb m
+T = t θ d nd n
+K = k x g ŋg ŋ
 H = ʔ h ɦ
 S = 0 s z
-R = r l j w w̃
+J = j w w̃
+R = r l {J}
 C = {P} {T} {K} {H} {S} {R}
 // CC is consonants except for approximants
 CC = {P} {T} {K} {H} {S}
 
-nas    = m  n  ŋ  0
-nasNas = mm nn ŋŋ 0
+nas    =  m  n  ŋ 0
 vlPlos =  p  t  k ʔ
 vdPlos =  b  d  g 0
 preNas = mb nd ŋg 0
+vlFric =  ɸ  θ  x h
 plos = {vlPlos} {vdPlos} {preNas}
-vlFric =  f  θ  x h
-vdFric =  v  ð  ɣ ɦ
 
 son = {nas} {R}
 
 sFric = s h
 zFric = z ɦ
 
-obst     = {preNas} {vlPlos} {sFric} {vlFric}
-obstFric = {preNas} {vlFric} {sFric} {vlFric}
-obstNas  = {nasNas} {nasNas} {zFric} {vdFric}
+obst = {preNas} {vlPlos} {sFric} {vlFric}
 
-// loss of voice contrast. we'll deal with the actual realization later, for
-// now let's just use voiceless
+// Intervocalic changes. Except where noted, intervocalically here allows
+// approximants intervening between the vowels and the change
+
+// Intervocalic rhotacism of *z and *d. This cannot occur before an
+// approximant, and is blocked by a preceding *r or *l
+z|d > r / {V}{J}?_ˈ?{V}
+
+// Loss of intervocalic voiced stops.
+{vdPlos} > 0 / {V}{R}?_{R}?ˈ?{V}
+// deal with resulting hiatus:
+{0:Vsyl} > {0:Vcon} / _ˈ?{V}
+{0:Vsyl} > {0:Vcon} / {V}_
+// either both vowels are the same, or one is schwa
+{V}{0:Vv} > {0:Vv}ː
+{V}ˈ{0:Vv} > ˈ{0:Vv}ː
+{0:Vv}{V} > {0:Vv}ː
+əə > əː
+
+// Now, loss of voice contrast. We'll deal with the actual realization later,
+// for now let's just use voiceless
 {0:vdPlos} > {0:vlPlos} ! {nas}_
 {0:zFric} > {0:sFric}
 
-/// // Cluster simplification
-/// // We want to get rid of most clusters, except those crossing syllable
-/// // boundaries. Geminate nasals and prenasalized stops are considered single
-/// // consonants, and coda approximant are considered diphthongs
-/// //
-/// // Simplify all clusters that can't be split across syllables boundaries
-/// {sFric}{0:obst} > {0:obstFric} / _{obst}|{nas}|#
-/// {nas}{0:obst} > {0:obstNas} / _{obst}|{nas}|#
-/// {0:obst}{sFric} > {0:obstFric} / {obst}|{nas}|#_
-/// {0:obst}{nas} > {0:obstNas} / {obst}|{nas}|#_
+// Loss of coda *s and *h, with compensatory lengthening.
+// Any *s or *h before an obstruent or word end is a coda
+{sFric} > ː / {V}ː?_{obst}|#
+// Intervening sonorant blocks lengthening
+{sFric} > 0 / {V}{son}_{obst}|#
+// No overlong vowels
+ː > 0 / ː_
 
-/// // Now insert syllable boundaries
-/// // onset obst
-/// 0 > % / _{obst}ˈ?{V} ! %{C}*_
-/// // onset obst + son
-/// 0 > % / _{obst}{son}ˈ?{V} ! %{C}*_
-/// // onset geminate nasal
-/// 0 > % / _{nasNas}ˈ?{V} ! %{C}*_
-/// // onset son
-/// 0 > % / _{son}ˈ?{V} ! %{C}*_
-/// // null onset
-/// 0 > % / #_ˈ?{V}
-/// // word finally
-/// 0 > % / _#
-
-/// // onset approximant clusters metathesize with following vowel if there isn't
-/// // already a diphthong, and the vowel isn't originally a syllabic consonant
-/// Vfull = a e o ə
-/// {0:R}{1:Vfull} > {1:Vfull}{0:R} / {C}_ ! _{R}
-/// {0:R}ˈ{1:Vfull} > ˈ{1:Vfull}{0:R} / {C}_ ! _{R}
-/// // otherwise, the approximant is lost
-/// {R} > 0 / {C}_ˈ?{V}
-
-/// // r–l merger in codas
-/// ḷ > ṙ
-/// l > r / {V}_ ! _{V}
-
-/// // loss of unstressed final vowels
-/// {0:V} > 0 / _%# ! ˈ_
-
-/// // epenthetic schwa in final consonant clusters
-/// {0:C}%{1:C}% > %{0:C}ə{1:C}% / _#
-/// %{0:C}{1:C}% > %{0:C}ə{1:C}% / _#
-
-/// % > 0 / _{C}%
-
-// Now some vowels...
-Vv = a e o ə i u ṙ
-
-// monophthongization
-Vn = õ ṅ õ ṅ i u ṙ
-Vj = e e ə i i u ṙ
-Vw = o ə u u i u ṙ
-Vr = a e o ṙ i u ṙ
-{0:Vv}w̃ > {0:Vn}
-{0:Vv}j > {0:Vj}
-{0:Vv}w > {0:Vw}
-{0:Vv}r > {0:Vr}
-
-// denasalization
-õ > o
-ũ > u
-ṅ > ə
-w̃ > w
-
-/// // i-, u-, and a-affectation
-/// ii = i e
-/// uu = u o
-/// aa = a ə ṙ
-/// Vi = e i e i i i ṙ
-/// Vu = o ə u o u u ṙ
-/// Va = a a a a e o ṙ
-/// {0:Vv} > {0:Vi} / _{C}?%({C}ˈ?{V}{C}?%)*{C}{ii}{C}?%#
-/// {0:Vv} > {0:Vu} / _{C}?%({C}ˈ?{V}{C}?%)*{C}{uu}{C}?%#
-/// {0:Vv} > {0:Va} / _{C}?%({C}ˈ?{V}{C}?%)*{C}{aa}{C}?%#
-
-/// // Vowel reduction
-/// // CV.CVC. > CCVC.
-/// {V}% > 0 / {C}_{C}ˈ?{V}{C}%
-/// // CV.CV. > CVC.
-/// %{0:C}{V}% > {0:C}% / {C}ˈ?{V}_
-/// // CV.CˈV > CCˈV
-/// {V}% > 0 / {C}_{C}ˈ{V}
-/// // CV.CCV > CVC.CV
-/// %{0:C} > {0:C}% / {V}_{C}
-
-% > 0
+// Cluster simplification
+// Spirantization of stop-obstruent clusters
+{0:vlPlos}{obst} > {0:vlFric}

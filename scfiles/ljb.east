@@ -21,6 +21,11 @@ Nt = p  t  k  b d g
 // change to stress accent marking
 {0:Vs} > ˈ{0:V}
 
+// initial *ə becomes *ó before labials/labiovelars, *á otherwise, if there is
+// no stressed syllable
+ə > ˈo / #{C}+_({P}|{W})({C}*{V})*{C}*#
+ə > ˈa / #{C}+_({C}+{V})*{C}*#
+
 // ABLAUT!
 // Pretonic vowel matches tonic vowel
 {V} > {0:V} / _{C}+ˈ{0:V}
@@ -63,5 +68,3 @@ Vo = o ə o ə
 {N} > {0:N} / _{0:Nt}
 // nasals assimilate to a preceding stop
 {N} > {0:N} / {0:Nt}_
-
-ˈ{0:V} > {0:Vs}
