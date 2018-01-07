@@ -18,7 +18,8 @@ nas    =  m  n  ŋ 0
 vlPlos =  p  t  k ʔ
 vdPlos =  b  d  g 0
 preNas = mb nd ŋg 0
-vlFric =  ɸ  θ  x h
+vlFric =  ɸ  θ  x h s
+vdFric =  β  ð  ɣ ɦ z
 plos = {vlPlos} {vdPlos} {preNas}
 
 son = {nas} {R}
@@ -26,7 +27,9 @@ son = {nas} {R}
 sFric = s h
 zFric = z ɦ
 
-obst = {preNas} {vlPlos} {sFric} {vlFric}
+vlObst = {vlPlos} {vlFric}
+vdObst = {vdPlos} {vdFric} {preNas}
+obst = {vlObst} {vdObst}
 
 // Intervocalic changes. Except where noted, intervocalically here allows
 // approximants intervening between the vowels and the change
@@ -46,19 +49,34 @@ z|d > r / {V}{J}?_ˈ?{V}
 {0:Vv}{V} > {0:Vv}ː
 əə > əː
 
-// Now, loss of voice contrast. We'll deal with the actual realization later,
-// for now let's just use voiceless
-{0:vdPlos} > {0:vlPlos} ! {nas}_
-{0:zFric} > {0:sFric}
-
-// Loss of coda *s and *h, with compensatory lengthening.
-// Any *s or *h before an obstruent or word end is a coda
-{sFric} > ː / {V}ː?_{obst}|#
+// Loss of coda *s, *h, and *ɦ, with compensatory lengthening.
+// Any *s, *h, or *ɦ before an obstruent or word end is a coda
+{sFric}|ɦ > ː / {V}ː?_{obst}|#
 // Intervening sonorant blocks lengthening
-{sFric} > 0 / {V}{son}_{obst}|#
+{sFric}|ɦ > 0 / {V}{son}_{obst}|#
 // No overlong vowels
 ː > 0 / ː_
 
 // Cluster simplification
+// Simplification of prenasals
+{0:preNas} > {0:nas} / _{H}
+{preNas} > n / _{S}
+{preNas} > {0:nas} / _{0:vlPlos}
+{preNas} > {0:nas} / _{0:vdPlos}
+{preNas} > {0:nas} / _{0:nas}
 // Spirantization of stop-obstruent clusters
+// voiced plosives spirantize only before voiced obstruents, and only in medial
+// clusters
+{0:vdPlos} > {0:vdFric} / {V}ː?{son}?_{vdObst} ! {nas}_
+// before voiceless obstruents, they devoice
+{0:vdPlos} > {0:vlPlos} / _{vlObst} ! {nas}_
+// feeding into the next rule:
+// voiceless plosives spirantize, consuming a following obstruent
 {0:vlPlos}{obst} > {0:vlFric}
+
+// Vocalization of voiced plosives
+fricApprox = w r j 0 r
+fricVowel  = u ṙ i ə ṙ
+
+{0:vdFric} > {0:fricApprox} / {V}ː?_{obst}
+{0:vdFric} > {0:fricVowel} / {R}_{obst}
