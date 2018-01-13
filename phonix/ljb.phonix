@@ -1,0 +1,80 @@
+import std.features
+
+feature accent
+feature grave
+
+# Consonants
+# Labials
+symbol p  [+cons +ro -son -nas -vc]
+symbol b  [+cons +ro -son -nas +vc]
+symbol mb [+cons +ro -son +nas +vc]
+symbol m  [+cons +ro +son +nas +vc]
+
+# Dentals
+symbol t  [+cons +ant -son -nas -vc]
+symbol d  [+cons +ant -son -nas +vc]
+symbol nd [+cons +ant -son +nas +vc]
+symbol n  [+cons +ant +son +nas +vc]
+
+# Velars
+symbol k  [+cons +hi -son -nas -vc]
+symbol g  [+cons +hi -son -nas +vc]
+symbol ŋg [+cons +hi -son +nas +vc]
+symbol ŋ  [+cons +hi +son +nas +vc]
+
+# Labio-velars
+symbol kʷ  [+cons +hi +ro -son -nas -vc]
+symbol gʷ  [+cons +hi +ro -son -nas +vc]
+symbol ŋgʷ [+cons +hi +ro -son +nas +vc]
+symbol ŋʷ  [+cons +hi +ro +son +nas +vc]
+
+# Fricatives
+symbol s  [+cons +cont -son +ant -nas -vc]
+symbol z  [+cons +cont -son +ant -nas +vc]
+symbol h  [+cons +cont -son      -nas -vc]
+symbol ɦ  [+cons +cont -son      -nas +vc]
+
+# Sonorants
+symbol j  [+cons +cont +son +hi +fr -bk]
+symbol w  [+cons +cont +son +hi -fr +bk +ro]
+symbol r  [+cons +cont +son +ant -nas]
+symbol l  [+cons +cont +son +ant -nas +lat]
+
+# Vowels
+# unaccented
+symbol a  [+syll -cons +son -hi +lo -fr -bk -accent]
+symbol e  [+syll -cons +son -hi -lo +fr -bk -accent]
+symbol o  [+syll -cons +son -hi +lo -fr +bk +ro -accent]
+symbol ə  [+syll -cons +son -hi -lo -fr -bk -grave]
+
+# accented
+symbol á  [(a) +accent]
+symbol é  [(e) +accent]
+symbol ó  [(o) +accent]
+
+# grave
+symbol à  [(a) *accent +grave]
+symbol è  [(e) *accent +grave]
+symbol ò  [(o) *accent +grave]
+
+syllable (onsetRequired)
+    onset [+cons -son]([+cons +son])
+    onset [+cons -son -cont $vc][+cons -son +cont $vc]
+    onset [+cons +son]
+    nucleus [+syll]
+    coda [+cons +son]
+    coda [+cons -son +cont $vc][+cons -son -cont $vc]
+    coda ([+cons +son])[+cons -son]
+
+# do accent arithmetic
+# accent last non-grave
+rule accent-last (filter=[+syll *grave])
+[-accent] => [+accent] / _ $
+
+# get rid of accents after the first
+rule remove-extra-accents (filter=[+syll +accent])
+[+accent] => [-accent] / [+accent] _
+
+# get rid of graves
+rule remove-graves
+[+grave] => [*grave -accent]

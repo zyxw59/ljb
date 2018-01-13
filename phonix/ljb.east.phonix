@@ -1,0 +1,156 @@
+import std.features
+
+feature accent
+
+# Consonants
+# Labials
+symbol p  [+cons -cont -son -nas -vc +ro]
+symbol b  [+cons -cont -son -nas +vc +ro]
+symbol mb [+cons -cont -son +nas +vc +ro]
+symbol m  [+cons +cont +son +nas +vc +ro]
+
+# Dentals
+symbol t  [+cons -cont -son -nas -vc +ant]
+symbol d  [+cons -cont -son -nas +vc +ant]
+symbol nd [+cons -cont -son +nas +vc +ant]
+symbol n  [+cons +cont +son +nas +vc +ant]
+symbol s  [+cons +cont -son -nas -vc +ant]
+symbol z  [+cons +cont -son -nas +vc +ant]
+
+# Velars
+symbol k  [+cons -cont -son -nas -vc +hi -lo -fr +bk]
+symbol g  [+cons -cont -son -nas +vc +hi -lo -fr +bk]
+symbol ŋg [+cons -cont -son +nas +vc +hi -lo -fr +bk]
+symbol ŋ  [+cons +cont +son +nas +vc +hi -lo -fr +bk]
+
+# Labio-velars
+symbol kʷ  [+cons -cont -son -nas -vc +hi -lo -fr +bk +ro]
+symbol gʷ  [+cons -cont -son -nas +vc +hi -lo -fr +bk +ro]
+symbol ŋgʷ [+cons -cont -son +nas +vc +hi -lo -fr +bk +ro]
+symbol ŋʷ  [+cons +cont +son +nas +vc +hi -lo -fr +bk +ro]
+
+# Glottals
+symbol ʔ  [+cons -cont -son -nas -vc]
+symbol h  [+cons +cont -son -nas -vc]
+symbol ɦ  [+cons +cont -son -nas +vc]
+
+# Sonorants
+symbol j  [-syll -cons +son -nas -accent +hi -lo +fr -bk    ]
+symbol w  [-syll -cons +son -nas -accent +hi -lo -fr +bk +ro]
+symbol w̃  [-syll -cons +son +nas -accent +hi -lo -fr +bk +ro]
+symbol r  [-syll -cons +son -nas -accent +ant -lat          ]
+symbol l  [-syll -cons +son -nas -accent +ant +lat          ]
+
+# Vowels
+# unaccented
+symbol a  [+syll -cons +son -nas -accent -hi +lo -fr -bk    ]
+symbol e  [+syll -cons +son -nas -accent -hi -lo +fr -bk    ]
+symbol o  [+syll -cons +son -nas -accent -hi -lo -fr +bk +ro]
+symbol ə  [+syll -cons +son -nas -accent -hi -lo -fr -bk    ]
+symbol i  [+syll -cons +son -nas -accent +hi -lo +fr -bk    ]
+symbol u  [+syll -cons +son -nas -accent +hi -lo -fr +bk +ro]
+symbol ũ  [+syll -cons +son +nas -accent +hi -lo -fr +bk +ro]
+symbol ṅ  [+syll -cons +son +nas -accent -hi -lo -fr -bk    ]
+symbol ṙ  [+syll -cons +son -nas -accent +ant -lat          ]
+symbol ḷ  [+syll -cons +son -nas -accent +ant +lat          ]
+
+# accented
+symbol á  [(a) +accent]
+symbol é  [(e) +accent]
+symbol ó  [(o) +accent]
+
+syllable (onsetRequired)
+    onset [+cons -son]([+cons +son])
+    onset [+cons -son -cont $vc][+cons -son +cont $vc]
+    onset [+cons +son]
+    nucleus [+syll]
+    coda [+cons +son]
+    coda [+cons -son +cont $vc][+cons -son -cont $vc]
+    coda ([+cons +son])[+cons -son]
+
+# in words without an accent, initial *ə becomes ó before labials/labiovelars,
+# á otherwise
+# put an accent on all initial schwas (not allowed but we'll fix it soon)
+rule accent-initial-schwa (filter=[+syll])
+ə => [+accent] / $ _
+
+# remove the accent from initial schwa if there's another accented vowel
+rule unaccent-initial-schwa (filter=[+syll +accent])
+[-hi -lo -fr -bk] => ə / _ [+accent]
+
+# accented schwa becomes ó before +ro
+rule rounded-accented-schwa
+[-hi -lo -fr -bk +accent] => [+bk +ro] / _ [+ro]
+
+# ... and à otherwise
+rule rounded-accented-schwa
+[-hi -lo -fr -bk +accent] => [+lo]
+
+# ABLAUT!
+# pretonic vowel matches tonic vowel
+rule pretonic-ablaut (filter=[+syll])
+[] => [$ROOT] / _ [+accent $ROOT]
+# Propretonic vowels partially ablaut towards tonic:
+# *a matches tonic
+# *e matches *e or *a, but becomes *ə if tonic is *o
+# *o matches *o or *a, but becomes *ə if tonic is *e
+# *ə always stays *ə
+rule propretonic-ablaut-a (filter=[+syll])
+a => [$lo $fr $bk $ro] / _ ([-accent])+ [+accent $lo $fr $bk $ro]
+rule propretonic-ablaut-e (filter=[+syll])
+e => [$lo $fr] / _ ([-accent])+ [+accent $lo $fr]
+rule propretonic-ablaut-o (filter=[+syll])
+o => [$lo $bk $ro] / _ ([-accent])+ [+accent $lo $bk $ro]
+# All posttonic vowels reduce to *ə
+rule posttonic-ablaut (filter=[+syll])
+[-accent] => [+accent -hi -lo -fr -bk *ro] / [+accent] _
+rule unaccent-schwa (filter=[+syll])
+[+accent -hi -lo -fr -bk] => [-accent]
+
+# syllabic consonants
+rule syllabic-consonants-coda
+ə[+son] => *[+syll] // _[+syll]
+rule syllabic-consonants-onset
+[+son]ə => [+syll]* // [+syll]_
+# fix syllabic nasals
+rule syllabic-nasal-rounded
+[+syll +nas +ro] => ũ
+rule syllabic-nasal-unrounded
+[+syll +nas *ro] => ṅ
+
+# labiovelars (except *ŋʷ) become plain labials
+rule develarization (filter=[-son])
+[+bk +ro] => [*Dorsal]
+
+# consonants (except liquids) disappear before prenasals
+rule prenasal-simplification (filter=[+cons])
+[] => * / _ [-cont +nas]
+
+# glottals disappear between consonants, before initial consonants, and after
+# final consonants (excepting liquids)
+rule glottal-disappearance-between-consonants
+[*Labial *Coronal *Dorsal +cons] => * / [+cons] _ [+cons]
+rule glottal-disappearance-initial
+[*Labial *Coronal *Dorsal +cons] => * / $ _ [+cons]
+rule glottal-disappearance-final
+[*Labial *Coronal *Dorsal +cons] => * / [+cons] _ $
+
+# *ŋʷ assimilates to a preceding stop
+rule ŋʷ-stop-assimilation
+ŋʷ * => [$Place]w / [-cont $Place] _
+# .. becomes *w following a nasal
+rule ŋʷ-nasal-assimilation
+ŋʷ => w / [+nas +son] _
+# .. and becomes *w̃ otherwise
+rule ŋʷ-approximantization
+ŋʷ => w̃
+
+# nasals disappear before other nasals
+rule nasal-nasal-assimilation
+[+nas +son] => * / _ [+nas +son]
+# nasals assimilate to a following stop
+rule nasal-pre-stop-assimilation
+[+nas +son] => [$Place] / _ [-cont $Place]
+# nasals assimilate to a preceding stop
+rule nasal-post-stop-assimilation
+[+nas +son] => [$Place] / [-cont $Place] _
