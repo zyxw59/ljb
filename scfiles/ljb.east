@@ -1,7 +1,7 @@
 V  = a e o ə
-Va = á é ó
+Vs = á é ó
 cV = m n ŋ ŋʷ r l j w
-vV = ũ ə̃ ə̃ ũ  r̩ l̩ i u
+vV = ũ ṅ ṅ ũ  ṙ ḷ i u
 VV = {V} {vV}
 
 P = p  b  mb  m
@@ -19,12 +19,33 @@ N  = m  n  ŋ  m n ŋ
 Nt = p  t  k  b d g
 
 // change to stress accent marking
-{0:Va} > ˈ{0:V}
+{0:Vs} > ˈ{0:V}
+
+// initial *ə becomes *ó before labials/labiovelars, *á otherwise, if there is
+// no stressed syllable
+ə > ˈo / #{C}+_({P}|{W})({C}*{V})*{C}*#
+ə > ˈa / #{C}+_({C}+{V})*{C}*#
+
+// ABLAUT!
+// Pretonic vowel matches tonic vowel
+{V} > {0:V} / _{C}+ˈ{0:V}
+// Propretonic vowels partially ablaut towards tonic:
+// *a matches tonic
+// *e matches *e or *a, but becomes *ə if tonic is *o
+// *o matches *o or *a, but becomes *ə if tonic is *e
+// *ə always stays *ə
+Va = a a a ə
+Ve = e e ə ə
+Vo = o ə o ə
+{0:V} > {0:Va} / _({C}+{V})+{C}+ˈa
+{0:V} > {0:Ve} / _({C}+{V})+{C}+ˈe
+{0:V} > {0:Vo} / _({C}+{V})+{C}+ˈo
+// All posttonic vowels reduce to *ə
+{V} > ə / ˈ({V}{C}+)+_
 
 // syllabic consonants
 ə{0:cV} > {0:vV} ! _ˈ?{VV}
 {0:cV}ə > {0:vV} ! {VV}_
-{0:cV}ˈə > ˈ{0:vV} ! {VV}_
 
 // labiovelars (except ŋʷ) become plain labials
 {0:W} > {0:P}
@@ -47,4 +68,3 @@ Nt = p  t  k  b d g
 {N} > {0:N} / _{0:Nt}
 // nasals assimilate to a preceding stop
 {N} > {0:N} / {0:Nt}_
-

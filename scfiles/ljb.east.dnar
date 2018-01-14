@@ -1,0 +1,82 @@
+Vv = a e o ũ ṅ ṙ ḷ i u
+V = {Vv} ə
+Vsyl = ũ ṅ ṙ ḷ i u
+Vcon = w n r l j w
+
+P = p ɸ b mb m
+T = t θ d nd n
+K = k x g ŋg ŋ
+H = ʔ h ɦ
+S = 0 s z
+J = j w w̃
+R = r l {J}
+C = {P} {T} {K} {H} {S} {R}
+// CC is consonants except for approximants
+CC = {P} {T} {K} {H} {S}
+
+nas    =  m  n  ŋ 0
+vlPlos =  p  t  k ʔ
+vdPlos =  b  d  g 0
+preNas = mb nd ŋg 0
+vlFric =  ɸ  θ  x h s
+vdFric =  β  ð  ɣ ɦ z
+plos = {vlPlos} {vdPlos} {preNas}
+
+son = {nas} {R}
+
+sFric = s h
+zFric = z ɦ
+
+vlObst = {vlPlos} {vlFric}
+vdObst = {vdPlos} {vdFric} {preNas}
+obst = {vlObst} {vdObst}
+
+// Intervocalic changes. Except where noted, intervocalically here allows
+// approximants intervening between the vowels and the change
+
+// Intervocalic rhotacism of *z and *d. This cannot occur before an
+// approximant, and is blocked by a preceding *r or *l
+z|d > r / {V}{J}?_ˈ?{V}
+
+// Loss of intervocalic voiced stops.
+{vdPlos} > 0 / {V}{R}?_{R}?ˈ?{V}
+// deal with resulting hiatus:
+{0:Vsyl} > {0:Vcon} / _ˈ?{V}
+{0:Vsyl} > {0:Vcon} / {V}_
+// either both vowels are the same, or one is schwa
+{V}{0:Vv} > {0:Vv}ː
+{V}ˈ{0:Vv} > ˈ{0:Vv}ː
+{0:Vv}{V} > {0:Vv}ː
+əə > əː
+
+// Loss of coda *s, *h, and *ɦ, with compensatory lengthening.
+// Any *s, *h, or *ɦ before an obstruent or word end is a coda
+{sFric}|ɦ > ː / {V}ː?_{obst}|#
+// Intervening sonorant blocks lengthening
+{sFric}|ɦ > 0 / {V}{son}_{obst}|#
+// No overlong vowels
+ː > 0 / ː_
+
+// Cluster simplification
+// Simplification of prenasals
+{0:preNas} > {0:nas} / _{H}
+{preNas} > n / _{S}
+{preNas} > {0:nas} / _{0:vlPlos}
+{preNas} > {0:nas} / _{0:vdPlos}
+{preNas} > {0:nas} / _{0:nas}
+// Spirantization of stop-obstruent clusters
+// voiced plosives spirantize only before voiced obstruents, and only in medial
+// clusters
+{0:vdPlos} > {0:vdFric} / {V}ː?{son}?_{vdObst} ! {nas}_
+// before voiceless obstruents, they devoice
+{0:vdPlos} > {0:vlPlos} / _{vlObst} ! {nas}_
+// feeding into the next rule:
+// voiceless plosives spirantize, consuming a following obstruent
+{0:vlPlos}{obst} > {0:vlFric}
+
+// Vocalization of voiced plosives
+fricApprox = w r j 0 r
+fricVowel  = u ṙ i ə ṙ
+
+{0:vdFric} > {0:fricApprox} / {V}ː?_{obst}
+{0:vdFric} > {0:fricVowel} / {R}_{obst}
