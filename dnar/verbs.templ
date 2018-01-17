@@ -2,39 +2,30 @@
 
 {{define "personal" -}}
 {{.}}ɦàs
-{{if Match . "{V} >  / _#" -}}
-{{.}}ws	{{.}}ʔès	{{.}}thəh
-{{- else -}}
-{{.}}wəs	{{.}}ʔès	{{.}}thəh
-{{- end}}
-{{.}}sàns	{{.}}snəj	{{.}}səh
-{{.}}kəs	{{.}}kjə	{{.}}kəh
+{{.}}wəs	{{.}}ʔès	{{.}}thəh	{{.}}wèh	{{.}}ʔèh	{{.}}thəhəh
+{{.}}sàns	{{.}}snəj	{{.}}səh	{{.}}sànhè	{{.}}snəj	{{.}}səhəh
+{{.}}kəs	{{.}}kjə	{{.}}kəh	{{.}}kəh	{{.}}kjə	{{.}}khəh
+			{{.}}tòh	{{.}}tòj	{{.}}tòhəh
 {{- end -}}
 
 {{define "present" -}}
 {{.}}
 {{- end -}}
 
-{{define "preterite_a" -}}
+{{define "aorist" -}}
 {{.}}dəl
 {{- end -}}
 
-{{define "preterite_b" -}}
+{{define "momentane" -}}
 {{.}}bet
-{{- end -}}
-
-{{define "imperfect" -}}
-{{.}}he
 {{- end -}}
 
 {{define "table" -}}
 {{Execute "personal" (Execute "present" .)}}
 
-{{Execute "personal" (Execute "preterite_a" .)}}
+{{Execute "personal" (Execute "aorist" .)}}
 
-{{Execute "personal" (Execute "preterite_b" .)}}
-
-{{Execute "personal" (Execute "imperfect" .)}}
+{{Execute "personal" (Execute "momentane" .)}}
 {{end -}}
 
 {{ApplyPairs (Execute "table" .) "" ".ljb.east.dnar"}}
