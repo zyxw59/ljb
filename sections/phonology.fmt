@@ -1,0 +1,60 @@
+# Phonology
+
+## Syllables
+
+### Consonants
+
+:table:[id=consonants] Consonants
+|[header]|||||||||||
+::[header]||[cols=2]Labial|[cols=2]Alveolar|Palatal|[cols=2]Velar|[cols=2]Labiovelar|[cols=2]Glottal
+::|Plosive          |p|b |t|d  | |k|g |kʷ|ɡʷ |ʔ|
+::|Prenasalized Stop| |ᵐb| |ⁿd | | |ᵑg|  |ᵑɡʷ| |
+::|Fricative        | |  |s|z  | | |  |  |   |h|ɦ
+::|Nasal            | |m | |n  | | |ŋ |  |ŋʷ | |
+::|Approximant      | |  | |l,r|j| |  |  |   | |
+
+Syllables must follow the sonorance hierarchy, with more sonorant elements
+falling closer to the nucleus than less sonorant elements.
+There are three categories of consonants as follows, from most to least
+sonorant\:
+
+:list:
+:: Approximants and nasals
+:: Fricatives
+:: Plosives and prenasalized stops
+
+Syllables consist of an onset of one or two consonants, followed by a vowel,
+followed by zero to two consonants.
+If both a plosive and a fricative are present, they must agree in voice.
+Nasal consonants cannot come immediately before prenasalized stops in the same
+syllable.
+
+## Accent
+
+Words in :langname: can either have a *mobile* accent, meaning the
+location of the accent varies throughout the inflectional paradigm, or a
+*static* accent, meaning the location of the accent is fixed on a
+particular syllable.
+In words with a mobile accent, the accent falls on the
+last syllable with a vowel other than `ə`.
+If no such syllable exists, the word lacks an accent.
+In words with a static accent, it will be marked with an acute accent (´).
+
+##[id=vowels] Vowels
+
+There are four phonemic vowels in :langname:\: `ə`, `e`, `o`, and `a`.
+`ə` can only occur in unaccented syllables; the rest can occur anywhere.
+
+## Orthography
+
+:langname: was never a written language, so we are free to use whatever
+transcription scheme we find most convenient.
+This document will denote consonants as listed on :ref:[consonants], with
+the following exceptions\:
+
+:list:
+:: `g` and `gʷ` instead of ɡ and ɡʷ
+:: `mb nd ŋg ŋgʷ` instead of ᵐb ⁿd ᵑɡ ᵑɡʷ
+
+Vowels will be transcribed as in :ref:[vowels].
+

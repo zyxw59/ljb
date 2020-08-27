@@ -1,0 +1,103 @@
+# Verbs
+
+The basic form of a conjugated verb is stem + personal endings, where the stem
+consists of a root with zero or more derivational endings.
+The personal ending conveys person, number, and voice, while the derivational
+endings provide aspect information.
+
+## Aspect
+
+Each root is a associated with a default aspect.
+To form other aspects, derivational suffixes are added.
+Some of the most common suffixes are shown in :ref:[aspect-suffixes].
+Because these suffixes are derivational in nature, they might also change the
+meaning of the verb.
+For example, the verb `jan` ‘to see’ becomes `jandéh` ‘to notice’
+in the inchoative aspect.
+
+:table:[id=aspect-suffixes] Aspect Suffixes
+|[conlang]|
+::[header]|`Ending`[not-conlang]|Aspect
+::|-jo    |Retrospective – the state resulting from an action
+::|-hemb  |Habitual – an action repeated over a long period of time
+::|-ʔraŋgʷ|Continuous – an ongoing action
+::|-bet   |Momentane – a single instance of an action
+::|-dəl   |Aorist – a normally continuous action viewed as a whole
+::|-déh   |Inchoative – the start of an action or state
+::|-kʷoz  |Cessative – the end of an action or state
+
+## Tense
+
+Verbs in :langname: are not explicitly marked for tense.
+Instead, aspect plays a much more important role.
+Perfective aspects, which refer to a single action, event, or point in time,
+are implicitly past tense, since they can never occur in the exact moment of
+the present – by the time the speaker has finished, the moment will have
+passed.
+Imperfective aspects, on the other hand, are more ambiguous as to tense.
+Generally, they are assumed to refer to the present.
+To specify a past tense meaning, context can be given thru adverbs or
+perfective verbs, or a perfective aspect can be used instead.
+
+## Personal Endings
+
+There are two sets of personal endings, one for the active voice, and one for
+the passive voice.
+Inanimate nouns do not have a nominative form, so there are no active endings
+for third person inanimate.
+The impersonal ending, `-ɦàs`, is neither active nor passive in meaning.
+The personal endings are shown on :ref:[verb-personal-endings].
+
+:table:[id=verb-personal-endings] Verb Personal Endings
+|[header]|[header]|[conlang]|[conlang]
+::[header]|Person|Number|[not-conlang]Active|[not-conlang]Passive
+::[underrule]|Impersonal           |—       |[cols=2]`-ɦàs`
+::|[rows=3]First Person            |Singular|-wəs |-wèh
+::                                 |Dual    |-ʔès |-ʔèh
+::[underrule]                      |Plural  |-thəh|-thəhəh
+::|[rows=3]Second Person           |Singular|-sàns|-sànhè
+::                                 |Dual    |-snəj|-snəj
+::[underrule]                      |Plural  |-səh |-səhəh
+::|[rows=3]Third Person (Animate)  |Singular|-kəs |-kəh
+::                                 |Dual    |-kjə |-kjə
+::[underrule]                      |Plural  |-kəh |-khəh
+::|[rows=3]Third Person (Inanimate)|Singular|—    |-tòh
+::                                 |Dual    |—    |-tòj
+::                                 |Plural  |—    |-tòhəh
+
+## Mood
+
+:langname: has two moods, the indicative and the subjunctive.
+The indicative is unmarked.
+The subjunctive is marked by the suffix `-rə`, inserted between the stem
+and the personal ending.
+
+The indicative mood is used when describing real facts or events in the present
+or past.
+The subjunctive is used in conditionals, imperatives, and as a future tense.
+
+## Voice
+
+:langname: has two voices, active and passive, as well as a third form, the
+impersonal.
+The active voice is used when the subject of the verb is the willful agent of
+the action.
+Because the active voice requires volition, inanimate nouns can never be the
+subject of an active verb.
+In the active voice, the subject takes the nominative case.
+The passive voice is used when the subject of the verb is the patient, target,
+or experiencer of the action.
+In the passive voice, the subject takes the accusative case.
+The impersonal is used when there is neither a willful agent nor a specific
+target of the action.
+It is frequently used in weather expressions.
+It is also used when there is a non-willful (particularly inanimate) agent.
+In this usage, the agent takes the instrumental case if it is inamiate, or the
+genitive case if it is animate.
+However animate agents in impersonal constructions are rare; instead, they are
+often replaced with an inanimate equivalent, or the active voice is used.
+
+## Negation
+
+Negation is expressed using the prefix `həs`.
+

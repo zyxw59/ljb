@@ -1,0 +1,147 @@
+# Nouns
+
+Nouns are generally formed by adding a nominalizing ending to a verbal root,
+although some roots can be used on their own as nouns.
+Nouns decline for three numbers\: singular, dual, and plural, and five cases\:
+nominative, accusative, instrumental, genitive, and locative.
+The nominative is only found in animate nouns, and serves as the subject of a
+verb.
+The accusative serves as the object of a verb.
+The instrumental is only found in inanimate nouns, and indicates the means of
+an action.
+The genitive can be translated as ‘from’ or ‘of’, and is used for motion
+away from, and certain types of possession.
+In the dual, or in comitative coördination, the genitive can also be used to
+mean ‘between’.
+The locative can be translated as ‘to’ or ‘at’, and indicates motion
+towards, location, other types of possession.
+In addition to their standalone meanings, different cases are used as the
+objects of prepositions, and verbs may have specific uses for the genitive and
+locative cases.
+The endings are given in :ref:[noun-endings].
+
+Because inanimate nouns lack a nominative case, they can't be the subject of a
+sentence.
+Instead, they are placed in the instrumental case, and the impersonal form of
+the verb is used\:
+
+:gloss:
+::[nosplit, conlang] kénjoɦas lomlarja məwhtəhjə.
+:: kén -jo -ɦàs lomlar -ja məwh -təh -jə
+::[conlang] separate -^^ret^^ -0 mountain -^^ins^^.s person -^^col^^ -^^acc^^.d
+::[nosplit] The mountain separates the two peoples.
+
+
+:table:[id=noun-endings] Noun Endings
+|[header]|[conlang]|[conlang]|[conlang]
+::[header]|Case|[not-conlang]Singular|[not-conlang]Dual|[not-conlang]Plural
+::|Nominative  |(ə)s`1`[not-conlang tnote]|jə |(ə)h`1`[not-conlang tnote]
+::|Accusative  |hè`2`[not-conlang tnote]  |jə |həh
+::|Instrumental|ja                        |jaj|jah
+::|Genitive    |(a)j`1`[not-conlang tnote]|za |(a)jh`1`[not-conlang tnote]
+::|Locative    |ra                        |raj|rah
+
+:list:[ordered, table-notes]
+::Unlike unlike normal endings, these ending do not start with consonants.
+  If they are added to an ending without a final consonant, their vowels are
+  dropped.
+::The grave accent indicates that this ending cannot be stressed.
+
+## Pronouns
+
+### Personal Pronouns
+
+
+There are first and second person pronouns, as well as several sets of
+demonstratives that function as third person pronouns.
+Since subjects are marked on verbs, the nominative case of the pronouns are
+only used when two subjects appear in comitative coördination (e.g. “You and I
+…”).
+The dual number cannot be used in this type of coördination, and therefore the
+personal pronouns lack a nominative in the dual.
+The forms of the pronouns are shown on :ref:[personal-pronouns].
+
+:table:[id=personal-pronouns] Personal Pronouns
+|[header]|[header]|[conlang]|[conlang]|[conlang]
+::[header]|Person|Case|[not-conlang]Singular|[not-conlang]Dual|[not-conlang]Plural
+::|[rows=4]First Person |Nominative|wəs  |—     |thəh
+::                      |Accusative|weh  |ʔehè  |thəhəh
+::                      |Genitive  |waj  |ʔeza  |thajh
+::[underrule]           |Locative  |wəra |ʔera  |thərah
+::|[rows=4]Second Person|Nominative|sáns |—     |səh
+::                      |Accusative|sánhe|snəj  |səhəh
+::                      |Genitive  |sánaj|sánza |sánajh
+::                      |Locative  |sánra|sánraj|sánrah
+
+### Demonstratives
+
+:langname: has three sets of demonstratives.
+The first, with a stem of `k.-`, is an animate anaphoric demonstrative,
+meaning that it refers to an animate noun (generally a person or animal) that
+has already been referred to.
+The second, with a stem of `to-`, is an inanimate anaphoric demonstrative,
+referring to a previously mentioned inanimate noun.
+The third, the indefinite pronoun, has a stem of `ɦa-`, and can refer to
+people or things in the abstract (i.e. ‘someone’), or introduce new nouns
+thru gesturing or relative clauses\:
+
+:gloss:
+::[nosplit, conlang] hróŋgkəh weh ɦah zəj kálpkeht nájskʷozrəweh.
+::[conlang] hróŋg -kəh weh ɦah zəj kálp -keht nájskʷoz -rə -wèh
+:: frighten -3p ^^pn^^.1.^^acc^^.s ^^ndef^^.^^nom^^.p
+^^rel^^ wish -^^prs^^.3p die -^^subj^^ -^^pas^^.1s
+::[nosplit] Those who wish me dead frighten me.
+
+:gloss:
+::[nosplit, conlang] həstekwò ɦahè.
+:: həs- tek -wò ɦahè
+::[conlang] not- {[care about]} -^^prs^^.1s ^^ndef^^.^^acc^^.s
+::[nosplit] I don't care about that.
+
+
+:table:[id=demonstrative-pronouns] Demonstrative Pronouns
+|[header]|[header]|[conlang]|[conlang]|[conlang]
+::[header]|Pronoun|Case|[not-conlang]Singular|[not-conlang]Dual|[not-conlang]Plural
+::|[rows=5]Animate   |Nominative  |kəs |—    |kəh
+::                   |Accusative  |keh |kjə  |khəh
+::                   |Instrumental|—   |—    |—
+::                   |Genitive    |kaj |ksa  |kajh
+::[underrule]        |Locative    |kra |kraj |krah
+::|[rows=5]Inanimate |Nominative  |—   |—    |—
+::                   |Accusative  |tóhe|tójə |tóhəh
+::                   |Instrumental|tója|tójaj|tójah
+::                   |Genitive    |tój |tóza |tójh
+::[underrule]        |Locative    |tóra|tóraj|tórah
+::|[rows=5]Indefinite|Nominative  |ɦas |ɦaj  |ɦah
+::                   |Accusative  |ɦahè|ɦjə  |ɦəh
+::                   |Instrumental|ɦja |ɦjaj |ɦjah
+::                   |Genitive    |ɦaj |ɦəza |ɦajh
+::                   |Locative    |ɦra |ɦraj |ɦrah
+
+### Reflexive Pronouns
+
+
+In addition to the personal and demonstrative pronouns, :langname: also has a
+reflexive pronoun, which is used to refer back to the subject.
+Because it must refer back to the subject of the sentence, it lacks nominative
+forms.
+It is also necessarily animate (since inanimate nouns can't be subjects), so it
+lacks instrumental forms.
+It is prototypically third person, although it can refer to first or second
+person subjects thru coördination with the corresponding personal pronoun.
+The forms of the reflexive pronouns are shown on :ref:[other-pronouns].
+
+:table:[id=other-pronouns] Other Pronouns
+|[header]|[header]|[conlang]|[conlang]|[conlang]
+::[header]|Pronoun|Case|[not-conlang]Singular|[not-conlang]Dual|[not-conlang]Plural
+::|[rows=5]Reflexive    |Nominative  |—     |—      |—
+::                      |Accusative  |deh   |djə    |dəh
+::                      |Instrumental|—     |—      |—
+::                      |Genitive    |daj   |dza    |dajh
+::[underrule]           |Locative    |dra   |draj   |drah
+::|[rows=5]Interrogative|Nominative  |dwətəs|dwətjə |dwətəh
+::                      |Accusative  |dwəthe|dwətjə |dwəthəh
+::                      |Instrumental|dwətja|dwətjaj|dwətjah
+::                      |Genitive    |dwətaj|dwətza |dwətajh
+::                      |Locative    |dwətra|dwətraj|dwətrah
+
