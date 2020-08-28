@@ -1,7 +1,25 @@
+@media screen and (min-width: 8in) {
+   body {
+      margin-left: calc((100vw - 8in) / 2);
+   }
+}
+
+@media screen and (min-width: 10in) {
+   body {
+      margin-left: 1in;
+   }
+}
+
+body {
+  max-width: 8in;
+  margin-bottom: 1in;
+}
+
 table {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-collapse: collapse;
+    width: 100%;
 }
 
 th[scope*=col] {
@@ -12,6 +30,15 @@ td, th {
     padding-left: 0.5em;
     text-align: left;
     vertical-align: top;
+}
+
+ol {
+  padding-left: 1.5em;
+}
+
+.toc ol ol {
+  list-style: disc;
+  padding-left: 1em;
 }
 
 p.toc-heading, p.gloss-heading, caption {
@@ -76,4 +103,8 @@ tr.underrule {
 
 .table-notes {
     font-size: smaller;
+}
+
+.lexicon-word-col {
+  min-width: 20%;
 }
