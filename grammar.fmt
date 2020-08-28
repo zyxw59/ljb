@@ -1,0 +1,42 @@
+:replace:
+:langname: Proto-`lajbɦahe`
+
+:title: :langname: Language
+
+:description: A grammar of the :langname: language
+
+:style: common.css
+
+:toc:[maxlevel=2]
+
+:import: sections/phonology.fmt
+
+:import: sections/sentence\_structure.fmt
+
+:import: sections/verbs.fmt
+
+:import: sections/particles.fmt
+
+:import: sections/nouns.fmt
+
+:import: sections/example\_sentences.fmt
+
+# Appendix
+
+:import: tables/roots.fmt
+
+:import: tables/verbal\_derivational\_endings.fmt
+
+:import: tables/derived\_verbs.fmt
+
+:import: tables/nominalizers.fmt
+
+:import: tables/secondary\_nominal.fmt
+
+:import: tables/nouns.fmt
+
+:import: tables/prepositions.fmt
+
+:import: tables/quantifiers.fmt
+
+:import: tables/conjunctions.fmt

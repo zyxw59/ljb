@@ -1,0 +1,110 @@
+@media screen and (min-width: 8in) {
+   body {
+      margin-left: calc((100vw - 8in) / 2);
+   }
+}
+
+@media screen and (min-width: 10in) {
+   body {
+      margin-left: 1in;
+   }
+}
+
+body {
+  max-width: 8in;
+  margin-bottom: 1in;
+}
+
+table {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th[scope*=col] {
+    border-bottom: 0.5px solid black;
+}
+
+td, th {
+    padding-left: 0.5em;
+    text-align: left;
+    vertical-align: top;
+}
+
+ol {
+  padding-left: 1.5em;
+}
+
+.toc ol ol {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+p.toc-heading, p.gloss-heading, caption {
+    font-weight: bold;
+}
+
+.gloss {
+    margin-top: 1em;
+}
+
+.gloss p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.gloss dl {
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.gloss dd {
+    margin-left: 0px;
+}
+
+.small-caps {
+    font-variant: small-caps;
+}
+
+li.nonumber {
+    list-style-type: none;
+}
+
+.undefined-replace, .undefined-reference, .unreferenceable-block  {
+    color: red;
+    font-weight: bold;
+}
+
+.conlang {
+    font-style: oblique;
+}
+
+.not-conlang {
+    font-style: initial;
+}
+
+h3 .secnum, h4 .secnum, h5 .secnum, h6 .secnum, p.heading .secnum {
+    display: none;
+}
+
+#consonants td {
+    text-align: center;
+}
+
+tr.underrule {
+    border-bottom: 1px solid black;
+}
+
+.tnote {
+    font-variant-position: super;
+}
+
+.table-notes {
+    font-size: smaller;
+}
+
+.lexicon-word-col {
+  min-width: 20%;
+}

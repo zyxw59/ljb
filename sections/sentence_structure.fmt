@@ -1,0 +1,56 @@
+# Sentence Structure
+
+:langname: has a default word order of verb–subject–object.
+However, since nouns are marked for case, the elements can be rearranged for
+emphasis.
+
+## Coördination
+
+In :langname:, multiple nouns, or multiple verbs, can be chained together to
+form a single element of a sentence, without any connecting words.
+
+### Nouns
+
+Nouns in coördination have two possible meanings.
+In the first meaning, called *attributive coördination*, the nouns all refer
+to the same thing, providing additional specification or description.
+In this case, all the nouns must agree in case and (usually) number.
+In the second meaning, called *comitative coördination*, the nouns refer to
+separate things, which together fill the role in the sentence.
+In this case, the nouns must agree in case, but not necessarily in number, and
+may not appear in the dual number.
+
+### Verbs
+
+Verbs in coördination also have two possible meanings.
+When the first verb is imperfective, the verbs typically refer to actions or
+states which are happening at the same time.
+This is called *concurrent coördination*.
+Some verbs, such as `nand` ‘to do slowly’, when used this way, have the effect
+of modifying the following verb.
+When the first verb is perfective, the verbs typically refer to sequential
+events, or states which result from actions.
+This is called *sequential coördination*.
+
+## Relative Clauses
+
+Relative clauses are marked with the conjunction `zəj`, which joins a noun
+to a relative clause.
+In the relative clause, if the head noun fills the role of subject or direct
+object, it can be dropped.
+Otherwise, an appropriate pronoun is used to fill the gap.
+
+:gloss:
+::[nosplit,conlang] rəhkəs nájslar məwhəs zəj janwəs ɦesp.
+::[conlang] rəh -kəs nájs -lar     məwh -əs        zəj     jan -wəs ɦesp
+::          go  -3s  live -^^loc^^ man  -^^nom^^.s ^^rel^^ see -1s  yesterday
+::[nosplit] The man that I saw yesterday went home.
+
+:gloss:
+::[nosplit,conlang] tnekdéhkəh məwhhè zəj tráwəs howtləjdhè kra.
+::[conlang] tnek     -déh      -kəh        məwh -hè        zəj     trá  -wəs
+howtləjd -hè       krа
+::          {be ill} -^^inch^^ -^^pas^^.3s man  -^^acc^^.s ^^rel^^ give -1s
+tea      -^^ac^^.s ^^pn^^.3.^^loc^^.s
+::[nosplit] The man that I gave the tea to got sick.
+
