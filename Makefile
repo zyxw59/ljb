@@ -16,10 +16,10 @@ TABLES=conjunctions\
 TABDIR=tables
 xelatex=latexmk -xelatex -interaction=nonstopmode
 
-all: grammar.pdf
+all: index.html
 
-grammar.pdf: grammar.tex $(SECTIONS:%=$(SECDIR)/%.tex) $(TABLES:%=$(TABDIR)/%.tex)
-	${xelatex} $<
+index.html: grammar.fmt $(SECTIONS:%=$(SECDIR)/%.fmt) $(TABLES:%=$(TABDIR)/%.fmt)
+	conlang_fmt < $< > $@
 
 %.pdf: %.tex
 	cd $(dir $<) && \

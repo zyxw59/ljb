@@ -1,0 +1,70 @@
+# Particles
+
+Particles are roots which are used on their own, without inflectional endings.
+Unlike verbal and nominal roots, particle roots can exist as stand-alone words.
+
+## Numbers
+
+Numbers one thru four are invariant, and are shown on :ref:[numbers].
+`sah`, acts like a noun, and can be translated as ‘a group of five’. It
+agrees with the head noun in case, tho in numbers five thru nine, it is
+singular, while the head noun is plural. This construction is an instance of
+attributive coördination. Numbers six thru nine are formed with `sah`,
+followed by a number one thru four, followed by the noun. The noun agrees in
+number with the last numeral, so six takes a singular noun, and seven takes a
+dual noun. When such a noun phrase is the subject of a verb, the verb is still
+plural.
+
+Numbers greater than nine are formed in various ways at different points in
+time, and in different areas. There are three systems\: the pure quinary system,
+the pure decimal system, and the mixed system.
+
+### Quinary System
+
+ In the quinary system, numbers greater than nine are
+formed with the number of fives, followed by an inflected form of `sah`,
+followed by the remainder (one thru four). Ten is `ləj sah`, with `sah`
+in the dual; fifteen is `tjeh sah`, with `sah` in the plural; and so
+on. Twenty five is `sah sah`, with the first `sah` in the singular, and
+the second one in the plural. Exact numbers beyond fifty or so are uncommon,
+and `gʷew` (which functions like a noun similarly to `sah`) can refer
+to any arbitrarily large number.
+
+### Decimal System
+
+ In the decimal system, `khen`, translatable as
+‘a group of ten’, acts like `sah`. Numbers greater than nine are formed
+with the number of tens, followed by an inflected form of `khen`, followed
+by the ones digit, formed identically to one thru nine. `gʷew` specifically
+means a hundred.
+
+### Mixed System
+
+ The mixed system takes elements from both the decimal
+system and the quinary system. For small numbers (usually less than 30, tho the
+exact cut-off can vary), the decimal system is used for numbers ending in 0--4,
+while the quinary system is used for numbers ending in 5--9. For larger
+numbers, the decimal system is used.
+
+:table:[id=numbers] Invariant Numbers
+||[conlang]
+::[header]|Number|[not-conlang]Word
+::|1|rən
+::|2|ləj
+::|3|tjeh
+::|4|pət
+
+## Prepositions and Adverbs
+
+Prepositions are placed before nouns to form indirect objects as well as
+temporal and spacial modifiers for verbs. Each preposition governs one or more
+cases. Prepositions which govern multiple cases generally take on distinct
+meanings for each case. Adverbs are like prepositions, except they lack an
+object, and modify the verb on their own.
+
+## Conjunctions
+
+Conjunctions join two elements of a sentence. They generally only join elements
+of the same type (i.e. two nouns or two verbs). The main exception to this rule
+is the conjunction `zəj`, which joins a noun to a relative clause.
+
