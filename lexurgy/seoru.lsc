@@ -1,0 +1,190 @@
+Feature Type(*consonant, vowel)
+Feature Height(high, low)
+Feature Frontness(front, back)
+Feature stress
+Feature +nasal
+Feature +long
+
+Feature +labial, +apical, +palatal, +dorsal, +glottal
+Feature Moa(stop, fricative, approx)
+Feature +sibilant, +lateral
+Feature voice
+
+Diacritic  ́ (floating) [+stress]
+Diacritic  ̀ (floating) [-stress]
+Diacritic ː [+long]
+Diacritic  ̃ [+nasal]
+
+Symbol ɔ [vowel low back]
+Symbol a [vowel low]
+Symbol ɛ [vowel low front]
+
+Symbol e [vowel front]
+Symbol ə [vowel]
+Symbol o [vowel back]
+
+Symbol i [vowel high front]
+Symbol u [vowel high back]
+
+Symbol p  [+labial stop        -voice]
+Symbol b  [+labial stop        +voice]
+Symbol ɸ  [+labial fricative   -voice]
+Symbol β  [+labial fricative   +voice]
+Symbol mb [+labial stop +nasal +voice]
+Symbol m  [+labial      +nasal +voice]
+
+Symbol t  [+apical stop        -voice]
+Symbol d  [+apical stop        +voice]
+Symbol θ  [+apical fricative   -voice]
+Symbol ð  [+apical fricative   +voice]
+Symbol nd [+apical stop +nasal +voice]
+Symbol n  [+apical      +nasal +voice]
+Symbol s  [+apical fricative   -voice +sibilant]
+Symbol z  [+apical fricative   +voice +sibilant]
+
+Symbol tɕ [+apical +palatal stop      -voice]
+Symbol dʑ [+apical +palatal stop      +voice]
+Symbol ɕ  [+apical +palatal fricative -voice +sibilant]
+Symbol ʑ  [+apical +palatal fricative +voice +sibilant]
+Symbol ɲ  [+apical +palatal +nasal    +voice]
+
+Symbol k  [+dorsal stop        -voice]
+Symbol g  [+dorsal stop        +voice]
+Symbol x  [+dorsal fricative   -voice]
+Symbol ɣ  [+dorsal fricative   +voice]
+Symbol ŋg [+dorsal stop +nasal +voice]
+Symbol ŋ  [+dorsal      +nasal +voice]
+
+Diacritic ʷ [+labial]
+Symbol ŋgʷ [+labial +dorsal stop +nasal +voice]
+
+Symbol ʔ [+glottal stop      -voice]
+Symbol h [+glottal fricative -voice]
+Symbol ɦ [+glottal fricative +voice]
+
+Symbol r [+apical    approx]
+Symbol l [+apical    approx +lateral]
+Symbol j [high front approx]
+Symbol w [high back  approx]
+
+Symbol r̩ [+apical vowel]
+Symbol l̩ [+apical vowel +lateral]
+
+deromanizer:
+  # precomposed      => combining diacritics
+  {á, é, ó, à, è, ò} => {á, é, ó, à, è, ò}
+  ə => ə̀
+
+degeminate-j-and-w:
+  {j, w}$1 $1 => $1
+
+syllabic-consonants:
+  ə [approx] => * [vowel *Moa] // _ [vowel]
+  ə {m, ŋʷ}  => * ũ            // _ [vowel]
+  ə {n, ŋ}   => * ə̃            // _ [vowel]
+  [approx] ə => [vowel *Moa] * // [vowel] _
+  {m, ŋʷ}  ə => ũ            * // [vowel] _
+  {n, ŋ}   ə => ə̃            * // [vowel] _
+
+vowel-shifts:
+  [low] => [front] / _ [+dorsal -labial]
+  [low] => [back] / _ [+labial]
+  [vowel] j => [front +long] * // _ [vowel]
+  [vowel] w => [back +long] * // _ [vowel]
+  o => eː / _ [+dorsal -labial]
+  e => oː / _ [+dorsal +labial]
+  ə => o / _ [+dorsal +labial]
+
+desyllabification:
+  ũ => u m
+  ə̃ => ə̀ m
+  r̩ => ə̀ r
+  l̩ => ə̀ l
+
+high-vowel-lengthening:
+  [high $Frontness approx] [high $Frontness vowel] => * [high $Frontness +long] // [vowel] _
+
+stress-arithmetic [vowel] propagate:
+  [*stress] => [+stress] / _ {[-stress], $}
+  Then:
+    [] => [*stress] / [+stress] []* _
+  Then:
+    [-stress] => [*stress]
+
+he-syllable-deletion:
+  [vowel] {h, ɦ} ə => [+long]
+  {h, ɦ} ə => * / {[consonant] _ [consonant], $ _ s}
+
+delabialization:
+  [+dorsal +labial] => [-labial] / {[back] _, _ [back]}
+  [+dorsal +labial] => [-labial] / {$, [consonant]} _  {$, [consonant]}
+  [+dorsal +labial] * => [-labial] w / _ [vowel]
+
+nasal-assimilation:
+  [+nasal !stop] => * / _ [+nasal]
+  [+nasal !stop] => m / _ [+labial]
+  [+nasal !stop] => n / _ [+apical !approx]
+  [+nasal !stop] => ŋ / _ [+dorsal]
+
+cluster-simplification propagate:
+  [approx] => * / {$, [consonant]} _ {$, [consonant]}
+  [+nasal !stop] [stop] => * [+nasal stop +voice]
+  [fricative] => [+voice] / [+nasal] _
+  [consonant] => * / {[stop] [fricative]} _ [consonant !approx]
+  {h, ɦ} => * / [consonant] _ [consonant]
+
+voicing-assimilation:
+  {[stop], [fricative]} => [-voice] / {s [consonant]* _, _ [consonant]* s}
+  {[stop], [fricative]} => [$voice] / _ [consonant !approx $voice]
+
+chain-shift-prenasal-stop-fricative:
+  [stop +nasal +voice] => [*nasal]
+  [stop *nasal +voice] => [fricative]
+
+glottal-velar-fricative-merger:
+  ɦ => ɣ // [+nasal] _
+# by analogy, where h could come from devoicing of ɦ (so ɣ < g would devoice to k)
+  h => k / {_ [-voice], s _}
+
+degemination:
+  [consonant]$1 $1 => $1 / {{$, [consonant]} _, _ {$, [consonant]}}
+
+final-cluster-reduction:
+  [stop] => * / [stop] _ $
+  [fricative] => * / [fricative] _ $
+  [+nasal] => * / {[stop], [fricative]} _ $
+
+romanizer-proto-western:
+  unchanged
+
+unconditional-v-w-merger:
+  β => w
+
+loss-of-velar-fricative:
+  ɣ => g / $ _
+  ɣ ɣ => g
+  ɣ => *
+
+partial-ng-g-merger:
+  ŋ => g / $ _
+  g => ŋ / _ {$, [+dorsal], [+nasal]}
+
+palatalization propagate:
+  {[+apical], [+dorsal]}&[fricative] j => [+apical +palatal -dorsal +sibilant] *
+  {[+apical], [+dorsal]}&[fricative]   => [+apical +palatal -dorsal +sibilant] / _ {[front], [+palatal]}
+  s k j => ɕ
+  s k   => ɕ / _ [front]
+  {[+apical !approx], [+dorsal]}&[!fricative] j => [+apical +palatal -dorsal] *
+  {[+apical !approx], [+dorsal]}&[!fricative]   => [+apical +palatal -dorsal] / _ {[front], [+palatal]}
+
+palatal-geminate-cleanup:
+  [+apical +palatal stop]$1 => [-palatal] / _ $1
+
+spirantation-of-stop-plus-h:
+  [stop] h => [fricative] *
+
+loss-of-glottals:
+  [+glottal] => *
+
+assimilation-of-liquid-clusters:
+  [+apical approx] => [$liquid] / _ [+apical approx $liquid]
